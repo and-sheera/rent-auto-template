@@ -1,0 +1,44 @@
+.ui-range {
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font: 300 16px/1.2 $geometria;
+    @include media-mobile {
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+  }
+  &__val {
+    &-unit {
+      margin-left: 5px;
+    }
+  }
+  .noUi {
+    &-target {
+      height: 5px;
+      background: #cecece;
+      border: 0;
+      border-radius: 2px;
+      box-shadow: none;
+    }
+    &-connect {
+      background: $blue;
+    }
+    &-handle {
+      top: -5px;
+      right: -5px;
+      width: 14px;
+      height: 14px;
+      background: $blue;
+      border: 0;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: none;
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

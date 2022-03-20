@@ -1,0 +1,40 @@
+.main-choice {
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
+  display: grid;
+  margin: -70px auto 0;
+  padding: 35px 30px;
+  grid-template-columns: 25% 25% 36%;
+  gap: 55px;
+  justify-content: space-between;
+  background: #fff;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 0.15);
+  border-radius: 6px;
+  @include media-tablet-horizontal {
+    max-width: 540px;
+    grid-template-columns: 1fr;
+  }
+  @include media-mobile {
+    margin-top: -10px;
+    padding: 40px 15px;
+  }
+  &__label {
+    font: 700 19px/1.2 $montserrat;
+    @include media-mobile {
+      font-size: 16px;
+    }
+  }
+  &__ui-select {
+    margin-top: 25px;
+    @include media-mobile {
+      margin-top: 20px;
+    }
+  }
+  &__ui-range {
+    margin-top: 15px;
+    @include media-mobile {
+      margin-top: 10px;
+    }
+  }
+}

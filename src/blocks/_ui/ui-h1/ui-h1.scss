@@ -1,0 +1,10 @@
+.ui-h1 {
+  margin-bottom: 30px;
+  font: 36px/1.1 $geometria;
+  @include media-laptop {
+    font-size: 28px;
+  }
+  @include media-tablet {
+    font-size: 20px;
+  }
+}

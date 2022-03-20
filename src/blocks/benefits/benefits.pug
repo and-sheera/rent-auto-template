@@ -1,0 +1,45 @@
+-
+  const benefitsData =[
+    {
+      icon: 'icon_benefits-1',
+      txt: 'Автомобили застрахованы по КАСКО и ОСАГО'
+    },
+    {
+      icon: 'icon_benefits-2',
+      txt: 'Дисконтная система для&nbsp;постоянных клиентов'
+    },
+    {
+      icon: 'icon_benefits-3',
+      txt: 'Только новые <br> автомобили'
+    },
+    {
+      icon: 'icon_benefits-4',
+      txt: 'Специальные условия для юридических лиц'
+    },
+    {
+      icon: 'icon_benefits-5',
+      txt: 'Эксклюзивные условия при длительной аренде'
+    },
+  ]
+
+mixin benefits(mods)
+  -
+    const baseName = 'benefits'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .benefits(class=allMods)&attributes(attributes)
+    .inner
+      +ui-h2('НАШИ ПРЕИМУЩЕСТВА', 'benefits')
+      .benefits__wrapper
+        each item in benefitsData
+          .benefits__item
+            +icon(item.icon, 'benefits')
+            .benefits__txt !{item.txt}
+    block

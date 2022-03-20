@@ -1,0 +1,18 @@
+.car-park {
+  position: relative;
+  margin-top: 100px;
+  padding: 100px 0 115px;
+  background-color: $greyBlock;
+  overflow: hidden;
+  @include media-tablet {
+    margin-top: 80px;
+    padding: 45px 0 35px;
+  }
+  &__ui-h2 {
+    margin-bottom: 35px;
+    text-align: center;
+    @include media-tablet {
+      text-align: start;
+    }
+  }
+}

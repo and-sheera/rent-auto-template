@@ -1,0 +1,21 @@
+mixin main-ban(mods)
+  -
+    const baseName = 'main-ban'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .main-ban(class=allMods)&attributes(attributes)
+    .inner
+      h1.main-ban__title Проходимый Renault Duster
+      .main-ban__subtitle от  1 750 ₽ / сутки
+      +ui-button('подробнее', 'main-ban')
+    .main-ban__img
+      img.main-ban__img-desk(src='img/main-ban.jpg', alt='')
+      img.main-ban__img-mob(src='img/main-ban_mob.jpg', alt='')
+    block

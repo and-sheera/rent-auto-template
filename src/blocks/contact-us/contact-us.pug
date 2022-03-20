@@ -1,0 +1,28 @@
+mixin contact-us(mods)
+  -
+    const baseName = 'contact-us'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .contact-us(class=allMods)&attributes(attributes)
+    .inner
+      .contact-us__wrapper
+        .contact-us__info
+          +ui-h2('Остались вопросы?', 'contact-us')
+          .contact-us__txt Оставьте заявку на консультацию.
+            br
+            | Наши специалисты свяжутся с&nbsp;Вами и&nbsp;ответят на все интирисующие вопросы
+          .contact-us__img
+            img(src='img/contact-us.png', alt='')
+        form.contact-us__form
+          +ui-input('name', 'Имя', 'contact-us')
+          +ui-input('phone', 'Контактный телефон', 'contact-us')
+          +ui-button('забронировать', 'contact-us', true)
+          +ui-checkbox('agree', 'Согласен с политикой конфиденциальности', 'contact-us')
+    block

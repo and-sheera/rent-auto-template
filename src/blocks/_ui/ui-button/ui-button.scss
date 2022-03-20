@@ -1,0 +1,23 @@
+.ui-button {
+  display: inline-block;
+  padding: 12px 55px;
+  text-align: center;
+  text-transform: uppercase;
+  font: 500 13px/1.2 $montserrat;
+  letter-spacing: 0.08em;
+  color: #fff;
+  background-color: $blue;
+  border: 1px solid $blue;
+  border-radius: 6px;
+  transition: 0.3s ease;
+  cursor: pointer;
+  @include media-tablet {
+    padding: 8px 22px;
+    font-weight: 400;
+    font-size: 11px;
+  }
+  &:hover {
+    color: $blue;
+    background-color: #fff;
+  }
+}

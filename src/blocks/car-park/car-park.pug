@@ -1,0 +1,37 @@
+-
+  const carData=[
+    {
+      img: 'car-park_1.jpg',
+      title: 'Эконом'
+    },
+    {
+      img: 'car-park_2.jpg',
+      title: 'Стандарт'
+    },
+    {
+      img: 'car-park_3.jpg',
+      title: 'Комфорт '
+    },
+    {
+      img: 'car-park_4.jpg',
+      title: 'Бизнес'
+    },
+  ]
+
+mixin car-park(mods)
+  -
+    const baseName = 'car-park'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .car-park(class=allMods)&attributes(attributes)
+    .inner
+      +ui-h2('автопарк', 'car-park')
+      +slider('car-park', carData)
+    block

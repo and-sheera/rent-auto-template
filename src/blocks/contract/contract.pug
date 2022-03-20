@@ -1,0 +1,24 @@
+mixin contract(mods)
+  -
+    const baseName = 'contract'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .contract(class=allMods)&attributes(attributes)
+    .inner
+      .contract__wrapper
+        .contract__info
+          +ui-h2('ДОПОЛНИТЕЛЬНЫЕ УСЛОВИЯ ПРИ ЗАКЛЮЧЕНИИ ДОГОВОРА', 'contract, --hr, --bigger')
+          .contract__txt
+            p Стороны обговаривают дополнительные&nbsp;условия, которые будут предусмотрены и указаны в договоре.
+            p В некоторых случаях компания предлагает клиенту услугу снижения ответственности в случае ДТП. Если клиент, взявший авто в прокат, не является виновником ДТП, с него снимается материальная ответственность по возмещению причинённого ущерба. Наличие такой услуги уточняется и обговаривается заблаговременно с компанией.
+            p Клиенту рекомендуется внимательно ознакомиться со всеми пунктами договора, обратить внимание на наличие страховки. Только после внимательного изучения договора можно приступить к его подписанию.
+        .contract__img
+          img(src='img/contract.jpg', alt='')
+    block

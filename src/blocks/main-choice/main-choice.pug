@@ -1,0 +1,23 @@
+mixin main-choice(mods)
+  -
+    const baseName = 'main-choice'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .main-choice(class=allMods)&attributes(attributes)
+    .main-choice__item
+      .main-choice__label Марка автомобиля
+      +ui-select('main-choice', 'Hyundai', 'Chevrolet', 'Renault')(data-placeholder='Марка')
+    .main-choice__item
+      .main-choice__label Класс автомобиля
+      +ui-select('main-choice', 'Эконом', 'Стандарт ', 'Комфорт', 'Бизнес')(data-placeholder='Эконом')
+    .main-choice__item
+      .main-choice__label Стоимость аренды в сутки
+      +ui-range('main-choice')#rent(data-min='1000' data-max='5000' data-start-top='1050' data-start-bot='4050')
+    block

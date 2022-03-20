@@ -1,0 +1,25 @@
+.promo-rent {
+  margin-top: 150px;
+  overflow: hidden;
+  @include media-tablet {
+    margin-top: 90px;
+    padding: 35px 0;
+    background-color: $greyBlock;
+  }
+  &__slider {
+    .slider__title {
+      @include media-tablet {
+        font-size: 12px;
+      }
+    }
+    .swiper {
+      .swiper-slide {
+        justify-content: flex-start;
+        @include media-tablet {
+          width: 234px;
+          height: 126px;
+        }
+      }
+    }
+  }
+}

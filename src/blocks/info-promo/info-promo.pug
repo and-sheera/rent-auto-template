@@ -1,0 +1,40 @@
+mixin info-promo(mods)
+  -
+    const baseName = 'info-promo'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .info-promo(class=allMods)&attributes(attributes)
+    .inner
+      .info-promo__container
+        .info-promo__col
+          +ui-h2('ПОЛЕЗНАЯ ИНФОРМАЦИЯ', 'info-promo')
+          .info-promo__content
+            -for(let i=0; i<2; i++)
+              a.info-promo__item(href='#' class=i>=1 ? 'info-promo__item--mb-hidden' : '')
+                .info-promo__img
+                  img(src='img/info-promo_1.jpg', alt='')
+                .info-promo__text
+                  .info-promo__date Январь 30, 2020 г.
+                  .info-promo__title Аренда минивэнов и&nbsp;микроавтобусов для путешествий всей семьёй
+                  .info-promo__desc Аренда минивэнов и микроавтобусов пользуется небывалым спросом в автомобильной области.
+          +ui-button('смотреть всё', 'info-promo')
+        .info-promo__col
+          +ui-h2('АКЦИИ', 'info-promo')
+          .info-promo__content
+            -for(let i=0; i<2; i++)
+              a.info-promo__item(href='#' class=i>=1 ? 'info-promo__item--mb-hidden' : '')
+                .info-promo__img
+                  img(src='img/info-promo_2.jpg', alt='')
+                .info-promo__text
+                  .info-promo__date Январь 30, 2020 г.
+                  .info-promo__title 2019 год уже начинается с&nbsp;подарков!
+                  .info-promo__desc Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях.
+          +ui-button('смотреть всё', 'info-promo')
+    block

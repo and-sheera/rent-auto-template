@@ -1,0 +1,35 @@
+.ui-textarea {
+  position: relative;
+  textarea {
+    width: 100%;
+    padding: 15px 20px;
+    font: 16px/1.5 $geometria;
+    background: #fff;
+    border: 1px solid $green;
+    border-radius: 6px;
+    outline: 0;
+    resize: none;
+    &.parsley-error {
+      border-color: $blue;
+    }
+  }
+  &__counter {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font: 12px/1 $geometria;
+    pointer-events: none;
+  }
+  .parsley-errors-list {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    font: 300 14px/1 $geometria;
+    color: $blue;
+    background: #fff;
+    border-radius: 4px;
+    &.filled {
+      padding: 5px 10px;
+    }
+  }
+}

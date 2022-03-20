@@ -1,0 +1,22 @@
+mixin ui-range(mods)
+  -
+    const baseName = 'ui-range'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .ui-range(class=allMods)&attributes(attributes)
+    .ui-range__wrap
+      .ui-range__val
+        span.ui-range__val-lower
+        span.ui-range__val-unit ₽
+      .ui-range__val
+        span.ui-range__val-upper
+        span.ui-range__val-unit ₽
+    .ui-range-body
+    block

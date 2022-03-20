@@ -1,0 +1,147 @@
+.ui-datepicker {
+  position: relative;
+  &:hover {
+    .icon_calendar {
+      color: $green;
+    }
+  }
+  input {
+    width: 100%;
+    padding: 16px 40px 13px 20px;
+    font: 16px/1.5 $geometria;
+    background: #fff;
+    border: 1px solid $green;
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+    &.filled ~ label,
+    &:focus ~ label {
+      top: 2px;
+      transform: translateY(0%);
+      font-size: 10px;
+    }
+    &.filled ~ .svg-icon--icon_calendar,
+    &:focus ~ .svg-icon--icon_calendar {
+      color: $green;
+    }
+  }
+  label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    font: 16px/1.5 $geometria;
+    color: #b2b2b2;
+    transition: 0.3s ease;
+    pointer-events: none;
+  }
+  .svg-icon--icon_calendar {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    width: 18px;
+    height: 20px;
+    transform: translateY(-50%);
+    color: $green;
+    transition: 0.3s ease;
+    pointer-events: none;
+    @include media-tablet {
+      right: 15px;
+    }
+  }
+  &--range {
+    .ui-input {
+      width: 235px;
+      @include media-tablet {
+        width: 200px;
+      }
+    }
+  }
+  &--time {
+    .svg-icon {
+      display: none;
+    }
+  }
+}
+.flatpickr-calendar {
+  width: 220px;
+  font: 16px/1.5 $geometria;
+  color: $green;
+  border: 0;
+  border-radius: 16px;
+  box-shadow: 4px 10px 16px rgba(169 164 181 / 0.2);
+  .flatpickr-months {
+    position: relative;
+    height: 50px;
+    .flatpickr-prev-month,
+    .flatpickr-next-month {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+    .flatpickr-month {
+      height: 100%;
+      .flatpickr-current-month {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 15%;
+        height: 100%;
+        padding: 0;
+        select {
+          text-align-last: center;
+        }
+      }
+      .flatpickr-monthDropdown-months {
+        padding: 0;
+      }
+    }
+  }
+  .flatpickr-weekdays {
+    height: 36px;
+    background: $green;
+    .flatpickr-weekday {
+      font: 400 14px/1.5 $geometria;
+      color: #fff;
+    }
+  }
+  .flatpickr-days {
+    width: 100%;
+    .dayContainer {
+      width: 100%;
+      min-width: 100%;
+      max-width: 100%;
+      .flatpickr-day {
+        max-width: 32px;
+        height: 32px;
+        font: 12px/32px $geometria;
+        border: 0;
+        border-radius: 6px;
+        box-shadow: none;
+        &:nth-last-child(-n+7) {
+          display: none;
+        }
+        &.inRange {
+          background: $green;
+          border-radius: 0;
+        }
+        &.today {
+          text-decoration: underline;
+          color: $green;
+          border-color: transparent;
+        }
+        &.selected {
+          color: #fff;
+          background: $green;
+        }
+        &.startRange {
+          border-radius: 6px 0 0 6px;
+        }
+        &.endRange {
+          background: $green;
+          border-radius: 0 6px 6px 0;
+        }
+      }
+    }
+  }
+}

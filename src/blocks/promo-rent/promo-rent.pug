@@ -1,0 +1,36 @@
+-
+  const rentData=[
+    {
+      img: 'promo-rent_1.jpg',
+      title: 'Аренда авто на сутки'
+    },
+    {
+      img: 'promo-rent_2.jpg',
+      title: 'Аренда авто на выходные'
+    },
+    {
+      img: 'promo-rent_3.jpg',
+      title: 'Аренда авто на неделю '
+    },
+    {
+      img: 'promo-rent_4.jpg',
+      title: 'Аренда авто на месяц'
+    },
+  ]
+
+mixin promo-rent(mods)
+  -
+    const baseName = 'promo-rent'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .promo-rent(class=allMods)&attributes(attributes)
+    .inner
+      +slider('promo-rent', rentData)
+    block

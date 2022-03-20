@@ -1,0 +1,54 @@
+.ui-checkbox {
+  input[type='checkbox'] {
+    display: none;
+    &:checked + label {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+  label {
+    position: relative;
+    padding-left: 20px;
+    font: 400 12px/1.2 $geometria;
+    cursor: pointer;
+    user-select: none;
+    @include media-tablet {
+      font-size: 11px;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 0;
+      width: 12px;
+      height: 12px;
+      border: 1px solid;
+      @include media-tablet {
+        top: 0;
+      }
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 4px;
+      left: 2px;
+      width: 8px;
+      height: 7px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='7' viewBox='0 0 8 7' fill='none'%3E%3Cpath d='M1 3L2.64294 5.46441C2.82395 5.73592 3.21232 5.76409 3.43061 5.52154L7.5 1' stroke='black' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      opacity: 0;
+      transition: 0.3s ease;
+      @include media-tablet {
+        top: 3px;
+      }
+    }
+    a {
+      display: inline;
+      text-decoration: underline;
+      color: $green;
+    }
+  }
+}

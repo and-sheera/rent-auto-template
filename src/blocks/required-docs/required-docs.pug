@@ -1,0 +1,43 @@
+-
+  const docsData =[
+    {
+      icon: 'icon_docs-1',
+      txt: 'Действующий паспорт'
+    },
+    {
+      icon: 'icon_docs-2',
+      txt: 'Водительское удостоверение категории “В”'
+    },
+    {
+      icon: 'icon_docs-3',
+      txt: '22+ Возраст <br> 2+ Стаж вождения'
+    },
+    {
+      icon: 'icon_docs-4',
+      txt: 'Поехали'
+    },
+  ]
+
+mixin required-docs(mods)
+  -
+    const baseName = 'required-docs'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .required-docs(class=allMods)&attributes(attributes)
+    .inner
+      +ui-h2('КАКИЕ ДОКУМЕНТЫ НУЖНЫ', 'required-docs')
+      .required-docs__subtitle Для того чтобы оформить аренду авто без водителя потребуются следующие документы:
+      .required-docs__wrapper
+        each item in docsData
+          .required-docs__item
+            +icon(item.icon)
+            .required-docs__txt !{item.txt}
+      .required-docs__footnote *Начиная с 25 лет, клиенту предоставляется возможность взять в прокат машину представительского класса.
+    block

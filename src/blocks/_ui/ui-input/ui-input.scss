@@ -1,0 +1,26 @@
+.ui-input {
+  position: relative;
+  input {
+    width: 100%;
+    padding: 15px 20px;
+    font: 16px/1.5 $geometria;
+    background: #fff;
+    border: 1px solid $greyInput;
+    border-radius: 6px;
+    outline: none;
+    @include media-tablet {
+      padding: 10px 15px;
+    }
+  }
+  label {
+    display: block;
+    margin-top: 5px;
+    font: 500 15px/1.1 $geometria;
+    color: $greyLight;
+    transition: 0.3s ease;
+    pointer-events: none;
+    @include media-tablet {
+      font-size: 14px;
+    }
+  }
+}

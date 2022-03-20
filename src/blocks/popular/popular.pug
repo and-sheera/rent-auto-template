@@ -1,0 +1,47 @@
+mixin popular(mods)
+  -
+    const baseName = 'popular'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .popular(class=allMods)&attributes(attributes)
+    .inner
+      +ui-h2('Самые популярные автомобили', 'popular')
+      .popular__grid
+        -for(let x = 0; x < 4; x++)
+          .popular__item(class=x>1 ? 'popular__item--mb-unvisible' : '')
+            .popular__img
+              img(src='img/popular_1.jpg', alt='')
+            .popular__logo
+              img(src='img/popular-logo_1.png', alt='')
+            .popular__info
+              .popular__name HYUNDAI CRETA
+              .popular__desc.popular__desc--grey Кроссоверы
+              .popular__desc 2017 г. в., 6АТ
+              .popular__bot
+                .popular__price
+                  .popular__price-old от 1 050 ₽
+                  .popular__price-new от 1 650 ₽
+                +ui-button('забронировать', 'popular')
+          .popular__item(class=x>1 ? 'popular__item--mb-unvisible' : '')
+            .popular__img
+              img(src='img/popular_2.jpg', alt='')
+            .popular__logo
+              img(src='img/popular-logo_2.png', alt='')
+            .popular__info
+              .popular__name CHEVROLET AVEO
+              .popular__desc.popular__desc--grey Стандарт
+              .popular__desc 2015 г. в., 6АТ
+              .popular__bot
+                .popular__price
+                  .popular__price-old от 1 050 ₽
+                  .popular__price-new от 1 050 ₽
+                +ui-button('забронировать', 'popular')
+      button.popular__more-btn Показать ещё
+    block

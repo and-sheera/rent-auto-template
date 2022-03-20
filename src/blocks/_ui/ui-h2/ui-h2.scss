@@ -1,0 +1,33 @@
+.ui-h2 {
+  font: 700 34px/1.1 $geometria;
+  text-transform: uppercase;
+  @include media-laptop {
+    font-size: 30px;
+  }
+  @include media-tablet {
+    font-size: 22px;
+  }
+  &--hr {
+    &::after {
+      content: '';
+      display: block;
+      width: 165px;
+      height: 2px;
+      margin-top: 15px;
+      background-color: $red;
+      @include media-tablet {
+        margin-top: 20px;
+        width: 100px;
+      }
+    }
+  }
+  &--bigger {
+    font-size: 42px;
+    @include media-laptop {
+      font-size: 30px;
+    }
+    @include media-tablet {
+      font-size: 22px;
+    }
+  }
+}
