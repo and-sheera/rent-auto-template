@@ -1,4 +1,4 @@
-mixin ui-select(mods, ...data)
+mixin ui-select(text, mods, ...data)
   -
     const baseName = 'ui-select'
     let allMods = ''
@@ -15,3 +15,5 @@ mixin ui-select(mods, ...data)
       option
       each item in data
         option=item
+    if text
+      label=text

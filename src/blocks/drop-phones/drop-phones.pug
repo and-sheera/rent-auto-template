@@ -1,0 +1,19 @@
+mixin drop-phones(mods)
+  -
+    const baseName = 'drop-phones'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .drop-phones(class=allMods)&attributes(attributes)
+    a.drop-phones__tel(href='tel:+79119240677') +7 911 924-06-77
+    .drop-phones__open
+    .drop-phones__drop
+      a.drop-phones__tel(href='tel:+78129243555') +7 812 924-35-55
+      a.drop-phones__tel(href='tel:+78129245550') +7 812 924-55-50
+    block

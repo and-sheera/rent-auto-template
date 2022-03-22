@@ -1,0 +1,77 @@
+.drop-phones {
+  position: relative;
+  z-index: 10;
+  padding: 0 40px 0 12px;
+  @include media-tablet-horizontal {
+    padding: 0 30px 0 10px;
+  }
+  &__open {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    width: 15px;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='8' viewBox='0 0 15 8' fill='none'%3E%3Cpath d='M14.54 6.75L7.54004 0.75L0.540039 6.75' stroke='black'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transform: rotate(180deg);
+    transition: transform 0.2s ease-out;
+    cursor: pointer;
+    @include media-tablet-horizontal {
+      right: 5px;
+      width: 13px;
+    }
+    &--active {
+      transform: rotate(0deg);
+    }
+  }
+  &__drop {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    width: 100%;
+    padding: 10px 35px 12px 12px;
+    background-color: #fff;
+    @include media-tablet-horizontal {
+      padding: 10px 25px 5px 10px;
+    }
+    &--visible {
+      display: block;
+    }
+  }
+  &__tel {
+    font: 600 18px/1.2 $montserrat;
+    @include media-tablet-horizontal {
+      font-weight: 400;
+      font-size: 14px;
+    }
+    &:not(:first-child) {
+      margin-top: 5px;
+      @include media-tablet-horizontal {
+        margin-top: 10px;
+      }
+    }
+  }
+  &--black {
+    .drop-phones {
+      &__open {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='8' viewBox='0 0 15 8' fill='none'%3E%3Cpath d='M14.54 6.75L7.54004 0.75L0.540039 6.75' stroke='white'/%3E%3C/svg%3E");
+      }
+      &__tel {
+        color: #fff;
+      }
+      &__drop {
+        background-color: $black;
+      }
+    }
+  }
+  &--grey {
+    .drop-phones {
+      &__drop {
+        background-color: $greyBlock;
+      }
+    }
+  }
+}

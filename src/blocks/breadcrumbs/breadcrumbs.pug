@@ -10,8 +10,10 @@ mixin breadcrumbs(mods)
       allMods = allMods.trim()
     }
 
-  ul.breadcrumbs(class=allMods)&attributes(attributes)
-    block
+  .breadcrumbs(class=allMods)&attributes(attributes)
+    .inner
+      ul.breadcrumbs__list
+        block
 
 mixin breadcrumbs-item(text, href, mods)
   -

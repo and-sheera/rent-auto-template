@@ -1,13 +1,185 @@
 .header {
+  position: relative;
   flex: 0 1;
-  padding: 20px 0;
   .inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+  &__top {
+    padding: 15px 0;
+  }
   &__logo {
-    width: 215px;
-    height: 30px;
+    width: 193px;
+    height: 39px;
+    &:hover {
+      color: $black;
+      @include media-tablet-horizontal {
+        color: #fff;
+      }
+    }
+    @include media-tablet-horizontal {
+      position: absolute;
+      bottom: 13px;
+      left: 30px;
+      width: 123px;
+      height: 25px;
+      color: #fff;
+    }
+  }
+  &__address {
+    position: relative;
+    padding-left: 30px;
+    font: 400 15px/1.2 $montserrat;
+    @include media-laptop {
+      display: none;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 13px;
+      height: 19px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='19' viewBox='0 0 13 19' fill='none'%3E%3Cpath d='M6.72957 0.0039601C3.03448 -0.126074 0 2.96303 0 6.79217C0 11.1378 3.9937 14.2916 6.23217 18.8271C6.34582 19.0574 6.66328 19.0577 6.77732 18.8275C8.80234 14.7464 12.2634 12.0098 12.9048 8.07816C13.5689 4.00967 10.6796 0.143021 6.72957 0.0039601ZM6.50443 10.3499C4.62278 10.3499 3.09736 8.757 3.09736 6.79217C3.09736 4.82735 4.62282 3.23442 6.50443 3.23442C8.38607 3.23442 9.91153 4.82735 9.91153 6.79217C9.91153 8.757 8.38607 10.3499 6.50443 10.3499Z' fill='%233498DB'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+  &__contacts {
+    display: flex;
+    align-items: center;
+    @include media-tablet-horizontal {
+      width: 100%;
+    }
+  }
+  &__messenger {
+    width: 26px;
+    height: 26px;
+    @include media-tablet-horizontal {
+      width: 20px;
+      height: 20px;
+    }
+    &:not(:first-child) {
+      margin-left: 10px;
+      @include media-tablet-horizontal {
+        margin-left: 15px;
+      }
+    }
+  }
+  &__drop-phones {
+    margin-left: 5px;
+    @include media-tablet-horizontal {
+      margin-left: auto;
+    }
+  }
+  &__bot {
+    padding: 12px 0;
+    background: $black;
+    .inner {
+      @include media-laptop {
+        padding: 0 30px;
+      }
+    }
+  }
+  &__menu {
+    display: flex;
+    margin-left: auto;
+    margin-right: 11%;
+    @include media-laptop {
+      margin-left: 0;
+      margin-right: 20px;
+    }
+    @include media-tablet-horizontal {
+      display: none;
+    }
+  }
+  &__link {
+    color: #fff;
+    text-transform: uppercase;
+    &:not(:last-child) {
+      margin-right: 50px;
+      @include media-laptop {
+        margin-right: 20px;
+      }
+    }
+  }
+  &__ui-button {
+    padding: 10px 15px;
+    font-size: 14px;
+    @include media-tablet-horizontal {
+      display: none;
+    }
+  }
+  &__burger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    padding: 40px 0;
+    background-color: $black;
+    color: #fff;
+    overflow-y: auto;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    &--visible {
+      display: block;
+      transform: translateX(0);
+    }
+    .inner {
+      height: 100%;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    .svg-icon {
+      &--icon_close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
+    }
+    &-icon {
+      display: none;
+      width: 25px;
+      height: 25px;
+      padding: 5px;
+      margin-left: auto;
+      cursor: pointer;
+      @include media-tablet-horizontal {
+        display: block;
+      }
+    }
+    &-logo {
+      width: 178px;
+      height: 36px;
+      color: #fff;
+      margin-bottom: 70px;
+    }
+    &-link {
+      font: 600 14px/1.3 $montserrat;
+      color: #fff;
+      text-transform: uppercase;
+      text-align: center;
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+      &--active {
+        color: $blue;
+      }
+    }
+    .drop-phones {
+      margin-top: 70px;
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
+    .ui-button {
+      padding: 10px 20px;
+      font-size: 13px;
+    }
   }
 }

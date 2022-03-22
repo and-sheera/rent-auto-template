@@ -1,0 +1,11 @@
+extends layouts/layout
+
+block variables
+  -const pageTitle ='Заявка'
+
+block content
+  main
+    +breadcrumbs('--grey-bg')
+      +breadcrumbs-item('Главная', '/')
+      +breadcrumbs-item('Заявка')
+    +order-form

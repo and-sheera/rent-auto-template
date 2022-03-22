@@ -78,4 +78,35 @@
       }
     }
   }
+  &--grey {
+    .select2-container {
+      display: block;
+      .select2 {
+        &-selection {
+          border-bottom-color: $greyInput;
+        }
+      }
+    }
+  }
+  &--mob-bigger {
+    .select2-container {
+      display: block;
+      .select2 {
+        &-selection {
+          &__rendered {
+            @include media-mobile {
+              font-size: 16px;
+            }
+          }
+        }
+        &-results {
+          &__option {
+            @include media-mobile {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
 }

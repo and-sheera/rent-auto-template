@@ -1,14 +1,17 @@
 .breadcrumbs {
-  display: flex;
-  align-items: center;
-  @include media-tablet {
-    overflow-y: auto;
+  padding-top: 35px;
+  &__list {
+    display: flex;
+    align-items: center;
+    @include media-tablet {
+      overflow-y: auto;
+    }
   }
   &__item {
     position: relative;
-    margin-right: 5px;
-    padding-right: 10px;
-    font-size: 14px;
+    margin-right: 20px;
+    padding-right: 20px;
+    font: 300 12px/1.2 $geometria;
     white-space: nowrap;
     &::after {
       content: '';
@@ -16,7 +19,7 @@
       top: 50%;
       right: 0;
       transform: translateY(-50%);
-      width: 6px;
+      width: 4px;
       height: 1px;
       background: #aaa;
     }
@@ -31,13 +34,7 @@
       }
     }
   }
-  &__link {
-    color: #575757;
-    &:hover {
-      color: $green;
-    }
-  }
-  &__text {
-    color: #aaa;
+  &--grey-bg {
+    background-color: $greyBlock;
   }
 }

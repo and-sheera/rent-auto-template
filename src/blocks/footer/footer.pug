@@ -1,4 +1,39 @@
+-
+  const footer=[
+    'Автопарк / тарифы',
+    'Расчёт стоимости',
+    'Заявка',
+    'Условия аренды',
+    'О КОМПАНИИ',
+    'Контакты',
+  ]
+
 footer.footer
   .inner
-    a.footer__logo(href='/')
-      +icon('icon_logo')
+    .footer__menu
+      each link in footer
+        a.footer__link(href='#')=link
+  .footer__content
+    .inner
+      .footer__top
+        a.footer__logo(href='/')
+          +icon('icon_logo')
+        .footer__contacts
+          .footer__socials
+            a.footer__mess(href='#')
+              +icon('icon_wa')
+            a.footer__mess(href='#')
+              +icon('icon_viber')
+          +drop-phones('--grey')
+      .footer__bot
+        a.footer__address(href='#') ул. Ново-Рыбинская, д. 19/21, БЦ&nbsp;"Квартал", офис 318
+        .footer__policy
+          a.footer__policy-item(href='#') Политика конфиденциальности
+          a.footer__policy-item(href='#') Пользовательское соглашение
+        .footer__made
+          .footer__made-txt Разработка сайта
+          .footer__made-link
+            +icon('icon_made-logo')
+  .footer__footnote
+    .inner
+      .footer__footnote-txt Информация, представленная на сайте, не&nbsp;является публичной офертой.

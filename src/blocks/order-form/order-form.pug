@@ -1,0 +1,28 @@
+mixin order-form(mods)
+  -
+    const baseName = 'order-form'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .order-form(class=allMods)&attributes(attributes)
+    .inner
+      .order-form__top
+        +ui-h2('персональные данные', 'order-form')
+        .order-form__left
+          .order-form__line
+            +ui-select('Выберите автомобиль', '', 'Hyundai', 'Chevrolet', 'Renault')(data-placeholder='Марка')
+          .order-form__line.order-form__line--2
+            +ui-datepicker('Начало аренды', 'popup-form, --single')
+            +ui-datepicker('Окончание аренды', 'popup-form, --single')
+          .order-form__line.order-form__line--2
+            +ui-input('start-time', 'Время начала аренды', '--time', 'time')
+            +ui-input('end-time', 'Время начала аренды', '--time', 'time')
+          .order-form__line.order-form__line--2
+          .order-form__line.order-form__line--2
+    block

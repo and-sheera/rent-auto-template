@@ -1,0 +1,27 @@
+mixin popup-form(mods)
+  -
+    const baseName = 'popup-form'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .popup-form(class=allMods style='display: none;')&attributes(attributes)
+    .popup-form__inner
+      +ui-select('', 'popup-form, --grey, --mob-bigger', 'Hyundai', 'Chevrolet', 'Renault')(data-placeholder='Марка авто')
+      +ui-select('', 'popup-form, --grey, --mob-bigger', 'Hyundai', 'Chevrolet', 'Renault')(data-placeholder='Выберите модель')
+      .popup-form__date
+        +ui-datepicker('Начало аренды', 'popup-form, --single')
+        +ui-datepicker('Окончание аренды', 'popup-form, --single')
+      .popup-form__total
+        .popup-form__total-txt Итого:
+        .popup-form__total-txt.popup-form__total-txt--grey Выберите авто и укажите даты
+      .popup-form__btn
+        +ui-button('арендовать', 'popup-form', true)
+      .popup-form__agreement Нажимая “Забронировать” я соглашаюсь c&nbsp;
+        a(href='#') условиями обработки моих персональных данных
+    block

@@ -9,6 +9,16 @@
 html {
   box-sizing: border-box;
   line-height: 1;
+  &.no-scroll {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    body {
+      position: relative;
+      height: 100%;
+      overflow: hidden;
+    }
+  }
 }
 body {
   margin: 0;
@@ -23,7 +33,7 @@ a {
   color: $black;
   transition: ease 0.3s;
   &:hover {
-    color: $green;
+    color: $blue;
   }
 }
 ul {
@@ -61,6 +71,7 @@ blockquote {
   margin: 0 auto;
   font-family: $geometria;
   color: $black;
+  overflow: hidden;
   .inner {
     max-width: 1450px;
     margin: 0 auto;
