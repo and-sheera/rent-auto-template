@@ -9,7 +9,7 @@ export default function uiSelects() {
       width: 'auto',
       dropdownAutoWidth: true,
       dropdownParent: selectParent,
-      placeholder: select.dataset.placeholder
+      placeholder: select.dataset.placeholder === undefined ? '' : select.dataset.placeholder
     })
   }
 }

@@ -11,7 +11,7 @@ mixin ui-datepicker(title, mods)
     }
     let randomId = Math.random().toString(36).replace(/[^a-z0-9]+/g, '').substr(0, 7);
 
-  .ui-datepicker(class=allMods)&attributes(attributes)
-    input(id=randomId readonly)
+  .ui-datepicker(class=allMods)
+    input(id=randomId)&attributes(attributes)
     label(for=randomId)=title
     +icon('icon_calendar')

@@ -10,11 +10,12 @@
         border-bottom: 1px solid $black;
         border-radius: 0;
         &__placeholder {
+          font-weight: 300;
           color: $greyLight;
         }
         &__rendered {
           padding: 0 20px 0 0;
-          font: 300 16px/1.3 $geometria;
+          font: 400 16px/1.3 $geometria;
           color: $black;
           @include media-mobile {
             font-size: 14px;
@@ -48,9 +49,8 @@
       }
       &-results {
         &__options {
-          max-height: none;
+          max-height: 300px;
           padding: 10px 0;
-          overflow-y: unset;
         }
         &__option {
           padding: 5px;
@@ -104,6 +104,88 @@
             @include media-mobile {
               font-size: 16px;
             }
+          }
+        }
+      }
+    }
+  }
+  &--border {
+    .select2-container {
+      display: block;
+      .select2 {
+        &-selection {
+          height: 55px;
+          padding: 15px 20px 15px 45px;
+          background: #fff;
+          border: 1px solid $greyInput;
+          border-radius: 6px;
+          &__placeholder {
+            color: $greyLight;
+          }
+          &__arrow {
+            top: 52%;
+            right: unset;
+            left: 25px;
+            width: 8px;
+            height: 4px;
+            b {
+              background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='4' viewBox='0 0 8 4' fill='none'%3E%3Cpath d='M4 4L7.03109 0.25H0.968911L4 4Z' fill='black'/%3E%3C/svg%3E");
+              background-repeat: no-repeat;
+              background-size: cover;
+            }
+          }
+        }
+        &-results {
+          border: 1px solid $greyInput;
+          border-radius: 0 0 6px 6px;
+          border-top: 0;
+          &__option {
+            padding: 5px 20px;
+            font-size: 16px;
+          }
+        }
+      }
+      &.select2-container--open {
+        .select2 {
+          &-selection {
+            &__arrow {
+              b {
+                transform: rotate(180deg);
+              }
+            }
+          }
+        }
+      }
+    }
+    label {
+      display: block;
+      margin-top: 5px;
+      font: 500 15px/1.2 $montserrat;
+      color: $greyLight;
+      pointer-events: none;
+    }
+  }
+  &--bigger {
+    .select2-container {
+      display: block;
+      .select2 {
+        &-selection {
+          &__rendered {
+            font: 300 20px/1.3 $geometria;
+          }
+        }
+      }
+    }
+  }
+  &--right-arrow {
+    .select2-container {
+      display: block;
+      .select2 {
+        &-selection {
+          padding: 15px 45px 15px 20px;
+          &__arrow {
+            right: 20px;
+            left: unset;
           }
         }
       }

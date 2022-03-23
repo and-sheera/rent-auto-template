@@ -1,6 +1,6 @@
-mixin ui-select(text, mods, ...data)
+mixin ui-text(text, mods)
   -
-    const baseName = 'ui-select'
+    const baseName = 'ui-text'
     let allMods = ''
     if (typeof mods !== 'undefined' && mods) {
       const modsList = mods.split(',')
@@ -10,10 +10,5 @@ mixin ui-select(text, mods, ...data)
       allMods = allMods.trim()
     }
 
-  .ui-select(class=allMods)
-    select&attributes(attributes)
-      option(label)
-      each item in data
-        option=item
-    if text
-      label=text
+  .ui-text(class=allMods)&attributes(attributes)!=text
+    block

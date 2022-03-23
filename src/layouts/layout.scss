@@ -82,6 +82,9 @@ blockquote {
     @include media-tablet {
       padding: 0 15px;
     }
+    .text-nowrap {
+      white-space: nowrap;
+    }
   }
   main {
     flex: 1 0;

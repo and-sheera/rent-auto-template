@@ -10,19 +10,51 @@ mixin order-form(mods)
       allMods = allMods.trim()
     }
 
-  .order-form(class=allMods)&attributes(attributes)
+  form.order-form(class=allMods)&attributes(attributes)
     .inner
       .order-form__top
         +ui-h2('персональные данные', 'order-form')
         .order-form__left
+          .order-form__line.order-form__line--fw
+            +ui-select('Выберите автомобиль', '--border, --bigger', 'Hyundai', 'Chevrolet', 'Renault')
           .order-form__line
-            +ui-select('Выберите автомобиль', '', 'Hyundai', 'Chevrolet', 'Renault')(data-placeholder='Марка')
-          .order-form__line.order-form__line--2
-            +ui-datepicker('Начало аренды', 'popup-form, --single')
-            +ui-datepicker('Окончание аренды', 'popup-form, --single')
-          .order-form__line.order-form__line--2
-            +ui-input('start-time', 'Время начала аренды', '--time', 'time')
-            +ui-input('end-time', 'Время начала аренды', '--time', 'time')
-          .order-form__line.order-form__line--2
-          .order-form__line.order-form__line--2
+            +ui-datepicker('Начало аренды', 'order-form, --single')
+            +ui-datepicker('Окончание аренды', 'order-form, --single')
+          .order-form__line
+            +ui-datepicker('Время начала аренды', 'order-form, --time')(placeholder='--:--')
+            +ui-datepicker('Время окончания аренды', 'order-form, --time')(placeholder='--:--')
+          .order-form__line
+            +ui-input('name', 'ФИО', 'order-form')
+            +ui-input('bday', 'Дата рождения', 'order-form')
+          .order-form__line
+            +ui-input('tel', 'Телефон', 'order-form')
+            +ui-input('mail', 'E-mail <span class="thin">*необязательно</span>', 'order-form')
+        .order-form__ban
+          .order-form__ban-img
+            img(src='img/order-form-car.jpg', alt='')
+          .order-form__ban-total
+            .order-form__ban-txt Итоговая стоимость
+            .order-form__ban-price 500 000 ₽
+      .order-form__block
+        .order-form__line
+          +ui-input('passport', 'Серия и номер паспорта', 'order-form')
+          +ui-input('passport-data', 'Кем выдан', 'order-form')
+          +ui-input('passport-data-2', 'Когда выдан', 'order-form')
+        .order-form__line
+          +ui-input('address', 'Адрес прописки', 'order-form')
+          +ui-input('addres-fact', 'Фактический адрес', 'order-form')
+      .order-form__block
+        .order-form__line
+          +ui-input('work', 'Место работы (название организации)', 'order-form')
+          +ui-input('work-address', 'Адрес компании', 'order-form')
+          +ui-input('position', 'Должность', 'order-form')
+      .order-form__block
+        .order-form__line
+          +ui-input('driver', 'Серия и номер водительского уд.', 'order-form')
+          +ui-input('driver-date', 'Когда выдано', 'order-form')
+          +ui-select('Стаж вождения', 'order-form, --border, --right-arrow', '2017', '2018', '2019')
+          +ui-input('territory', 'Территория эксплуатации', 'order-form')
+      .order-form__block
+        +ui-button('Отправить', 'order-form', true)
+        +ui-checkbox('agree', 'Согласен с политикой конфиденциальности', 'order-form')
     block

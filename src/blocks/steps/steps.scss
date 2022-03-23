@@ -1,0 +1,20 @@
+.steps {
+  margin: 100px 0 80px;
+  @include media-tablet {
+    margin: 50px 0 100px;
+  }
+  &__ui-h2 {
+    margin-bottom: 30px;
+    @include media-tablet {
+      margin-bottom: 25px;
+    }
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 90px;
+      @include media-tablet {
+        margin-bottom: 60px;
+      }
+    }
+  }
+}

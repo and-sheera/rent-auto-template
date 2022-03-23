@@ -6,33 +6,25 @@ export default function uiDatepicker() {
   const tomorrowDate = new Date().setDate(new Date().getDate() + 1)
   const defaultSettings = {
     locale: Russian,
-    defaultDate: 'today',
     dateFormat: 'd.m.Y',
-    disableMobile: 'true'
-  }
-  const rangeSettings = {
-    mode: 'range',
-    defaultDate: ['today', tomorrowDate]
+    disableMobile: 'true',
+    allowInput: true
   }
   const timeSettings = {
     enableTime: true,
     noCalendar: true,
     dateFormat: 'H:i',
-    defaultDate: '12:00',
-    time_24hr: true
+    time_24hr: true,
+    disableMobile: 'true',
+    allowInput: true
   }
 
   // datepicker init
   const datepickersSingle = document.querySelectorAll('.ui-datepicker--single')
-  const datepickersRange = document.querySelectorAll('.ui-datepicker--range')
   const datepickersTime = document.querySelectorAll('.ui-datepicker--time')
   for (const datepicker of datepickersSingle) {
     const datepickerSingle = datepicker.querySelector('input')
     flatpickr(datepickerSingle, defaultSettings)
-  }
-  for (const datepicker of datepickersRange) {
-    const datepickerRange = datepicker.querySelector('input')
-    flatpickr(datepickerRange, Object.assign({}, defaultSettings, rangeSettings))
   }
   for (const datepicker of datepickersTime) {
     const datepickerTime = datepicker.querySelector('input')

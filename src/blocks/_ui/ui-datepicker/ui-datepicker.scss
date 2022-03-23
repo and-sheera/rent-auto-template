@@ -14,31 +14,16 @@
     border-radius: 6px;
     outline: none;
     cursor: pointer;
-    &.filled ~ label,
-    &:focus ~ label {
-      &::after {
-        transform: rotate(180deg);
-      }
+    &::placeholder {
+      color: $black;
     }
   }
   label {
     display: block;
     margin-top: 5px;
-    font: 400 15px/1.2 $montserrat;
+    font: 500 15px/1.2 $montserrat;
     color: $greyLight;
     pointer-events: none;
-    &::before {
-      content: '';
-      position: absolute;
-      top: 27px;
-      left: 45px;
-      width: 8px;
-      height: 4px;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='4' viewBox='0 0 8 4' fill='none'%3E%3Cpath d='M4 4L7.03109 0.25H0.968911L4 4Z' fill='black'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-size: cover;
-      transition: transform 0.3s ease-in;
-    }
   }
   .svg-icon--icon_calendar {
     position: absolute;
@@ -53,6 +38,29 @@
       right: 15px;
     }
   }
+  &--single {
+    input {
+      &.active ~ label {
+        &::before {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    label {
+      &::before {
+        content: '';
+        position: absolute;
+        top: 27px;
+        left: 45px;
+        width: 8px;
+        height: 4px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='4' viewBox='0 0 8 4' fill='none'%3E%3Cpath d='M4 4L7.03109 0.25H0.968911L4 4Z' fill='black'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: transform 0.3s ease-in;
+      }
+    }
+  }
   &--range {
     .ui-input {
       width: 235px;
@@ -64,6 +72,22 @@
   &--time {
     .svg-icon {
       display: none;
+    }
+    input {
+      padding: 15px 20px;
+    }
+    label {
+      &::before {
+        content: '';
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 7px;
+        height: 19px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='7' height='19' viewBox='0 0 7 19' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.40204 3.75L3.37094 0L0.339844 3.75H6.40204ZM6.40204 15.25L3.37094 19L0.339844 15.25H6.40204Z' fill='black'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
     }
   }
 }
@@ -210,6 +234,44 @@
         &.endRange {
           background: $blue;
           border-radius: 0 6px 6px 0;
+        }
+      }
+    }
+  }
+  &.noCalendar {
+    width: 200px;
+    @include media-tablet {
+      display: none;
+    }
+    .flatpickr-time {
+      border: 0;
+      line-height: 1.2;
+      input {
+        font: 400 18px/1.2 $montserrat;
+        &::selection,
+        &:focus,
+        &:hover {
+          background: transparent;
+        }
+      }
+      .numInputWrapper {
+        &:hover {
+          background: transparent;
+        }
+        .arrowUp,
+        .arrowDown {
+          background: transparent;
+          border: 0;
+          @include media-tablet {
+            opacity: 1;
+          }
+          &::after {
+            border-bottom-color: $black;
+            border-top-color: $black;
+          }
+        }
+        .arrowUp {
+          top: 5px;
         }
       }
     }

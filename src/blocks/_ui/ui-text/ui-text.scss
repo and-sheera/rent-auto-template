@@ -1,0 +1,14 @@
+.ui-text {
+  font: 400 18px/1.2 $geometria;
+  @include media-tablet {
+    font-size: 16px;
+  }
+  p {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+      @include media-tablet {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
