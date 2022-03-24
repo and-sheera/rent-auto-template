@@ -10,30 +10,35 @@ header.header
   .header__top
     .inner
       a.header__logo(href='/')
-        +icon('icon_logo')
+        img(src='img/svgs/icon_logo.svg', alt='')
       a.header__address(href='#') ул. Ново-Рыбинская, д. 19/21, БЦ "Квартал", офис 318
       .header__contacts
         a.header__messenger(href='#')
-          +icon('icon_wa')
+          img(src='img/svgs/icon_wa.svg', alt='')
         a.header__messenger(href='#')
-          +icon('icon_viber')
+          img(src='img/svgs/icon_viber.svg', alt='')
         +drop-phones('header')
   .header__bot
     .inner
-      .header__menu
+      a.header__logo(href='/')
+        img(src='img/svgs/icon_logo--white.svg', alt='')
+      ul.header__menu
         each link in header
-          a.header__link(href='#')=link
+          li.header__link
+            a(href='#')=link
       .header__burger-icon
-        +icon('icon_burger')
+        img(src='img/svgs/icon_burger.svg', alt='')
       +ui-button('расчет стоимости', 'header, --green').js-popup-form(href='#rent-from')
   .header__burger
-    +icon('icon_close')
+    .header__burger-close
+      img(src='img/svgs/icon_close.svg', alt='')
     .inner
       a.header__burger-logo(href='/')
-        +icon('icon_logo')
-      .header__burger-menu
+        img(src='img/svgs/icon_logo--white.svg', alt='')
+      ul.header__burger-menu
         each link, index in header
-          a.header__burger-link(href='#' class=index==0 ? 'header__burger-link--active' : '')=link
+          li.header__burger-link(class=index==0 ? 'header__burger-link--active' : '')
+            a(href='#')=link
       +drop-phones('--black')
       +ui-button('расчет стоимости', '--green').js-popup-form(href='#rent-from')
   +popup-form()#rent-from

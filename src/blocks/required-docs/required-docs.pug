@@ -37,7 +37,8 @@ mixin required-docs(mods)
       .required-docs__wrapper
         each item in docsData
           .required-docs__item
-            +icon(item.icon)
+            .required-docs__icon
+              img(src=`img/svgs/${item.icon}.svg`, alt='')
             .required-docs__txt !{item.txt}
       .required-docs__footnote *Начиная с 25 лет, клиенту предоставляется возможность взять в прокат машину представительского класса.
     block

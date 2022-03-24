@@ -14,4 +14,5 @@ mixin ui-datepicker(title, mods)
   .ui-datepicker(class=allMods)
     input(id=randomId)&attributes(attributes)
     label(for=randomId)=title
-    +icon('icon_calendar')
+    .ui-datepicker__icon
+      img(src='img/svgs/icon_calendar.svg', alt='')

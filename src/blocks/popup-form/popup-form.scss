@@ -96,6 +96,10 @@
     background-size: contain;
     background-repeat: no-repeat;
     box-shadow: none;
+    @include media-tablet-horizontal {
+      top: 15px;
+      right: 10px;
+    }
     svg {
       display: none;
     }

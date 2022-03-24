@@ -25,7 +25,7 @@
     color: $greyLight;
     pointer-events: none;
   }
-  .svg-icon--icon_calendar {
+  &__icon {
     position: absolute;
     top: 20px;
     left: 20px;
@@ -70,7 +70,7 @@
     }
   }
   &--time {
-    .svg-icon {
+    .ui-datepicker__icon {
       display: none;
     }
     input {
@@ -103,137 +103,145 @@
   &::before {
     display: none;
   }
-  .flatpickr-months {
-    position: relative;
-    height: 26px;
-    .flatpickr-prev-month,
-    .flatpickr-next-month {
-      top: 5px;
-      height: 20px;
-      padding: 0;
-      &:hover {
-        svg {
-          fill: none;
+  .flatpickr {
+    &-months {
+      position: relative;
+      height: 26px;
+      .flatpickr-prev-month,
+      .flatpickr-next-month {
+        top: 5px;
+        height: 20px;
+        padding: 0;
+        &:hover {
+          svg {
+            fill: none;
+          }
         }
       }
-    }
-    .flatpickr-month {
-      height: 100%;
-      .flatpickr-current-month {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: auto;
-        padding: 0;
-        select {
-          text-align-last: center;
-        }
-        .cur-month {
-          font: 400 16px/1.6 $montserrat;
-          &:hover {
-            background: none;
+      .flatpickr-month {
+        height: 100%;
+        .flatpickr-current-month {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: auto;
+          padding: 0;
+          select {
+            text-align-last: center;
           }
-        }
-        .numInputWrapper {
-          &:hover {
-            background: none;
-          }
-          input {
-            padding: 0;
-            margin-left: 5px;
+          .cur-month {
             font: 400 16px/1.6 $montserrat;
-            &::selection {
-              background: rgb(0 0 0 / 0.1);
-            }
-          }
-          span {
-            right: -5px;
-            border: 0;
             &:hover {
               background: none;
             }
           }
-          .arrowUp,
-          .arrowDown {
-            &::after {
-              width: 6px;
-              height: 6px;
-              border-bottom: 1px solid $black;
-              border-right: 1px solid $black;
-              border-left: none;
-              border-top: none;
+          .numInputWrapper {
+            &:hover {
+              background: none;
             }
-          }
-          .arrowUp {
-            &::after {
-              top: 40%;
-              transform: rotate(-135deg);
+            input {
+              padding: 0;
+              margin-left: 5px;
+              font: 400 16px/1.6 $montserrat;
+              &::selection {
+                background: rgb(0 0 0 / 0.1);
+              }
             }
-          }
-          .arrowDown {
-            &::after {
-              top: 7%;
-              transform: rotate(45deg);
+            span {
+              right: -5px;
+              border: 0;
+              &:hover {
+                background: none;
+              }
+            }
+            .arrowUp,
+            .arrowDown {
+              &::after {
+                width: 6px;
+                height: 6px;
+                border-bottom: 1px solid $black;
+                border-right: 1px solid $black;
+                border-left: none;
+                border-top: none;
+              }
+            }
+            .arrowUp {
+              &::after {
+                top: 40%;
+                transform: rotate(-135deg);
+              }
+            }
+            .arrowDown {
+              &::after {
+                top: 7%;
+                transform: rotate(45deg);
+              }
             }
           }
         }
-      }
-      .flatpickr-monthDropdown-months {
-        padding: 0;
+        .flatpickr-monthDropdown-months {
+          padding: 0;
+        }
       }
     }
-  }
-  .flatpickr-weekdays {
-    height: 36px;
-    padding: 0 5px;
-    background: $greyBlock;
-    border-radius: 6px;
-    .flatpickr-weekday {
-      font: 400 14px/1.5 $montserrat;
-      color: $black;
+    &-weekdays {
+      height: 36px;
+      padding: 0 5px;
+      background: $greyBlock;
+      border-radius: 6px;
+      @include media-mobile {
+        display: none;
+      }
+      .flatpickr-weekday {
+        font: 400 14px/1.5 $montserrat;
+        color: $black;
+      }
     }
-  }
-  .flatpickr-innerContainer {
-    margin-top: 5px;
-  }
-  .flatpickr-days {
-    margin-top: 10px;
-    width: 100%;
-    .dayContainer {
+    &-innerContainer {
+      margin-top: 5px;
+    }
+    &-days {
+      margin-top: 10px;
       width: 100%;
-      min-width: 100%;
-      max-width: 100%;
-      .flatpickr-day {
-        max-width: 30px;
-        height: 30px;
-        font: 12px/30px $montserrat;
-        border: 0;
-        border-radius: 6px;
-        box-shadow: none;
-        &:nth-last-child(-n+7) {
-          display: none;
-        }
-        &.inRange {
-          background: $blue;
-          border-radius: 0;
-        }
-        &.today {
-          color: $blue;
-          border-color: transparent;
-          &:hover {
-            background-color: #e6e6e6;
+      @include media-mobile {
+        margin-top: 0;
+      }
+      .dayContainer {
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        .flatpickr-day {
+          max-width: 30px;
+          height: 30px;
+          font: 12px/30px $montserrat;
+          border: 0;
+          border-radius: 6px;
+          box-shadow: none;
+          &:nth-last-child(-n+7) {
+            display: none;
           }
-        }
-        &.selected {
-          color: #fff;
-          background: $blue;
-        }
-        &.startRange {
-          border-radius: 6px 0 0 6px;
-        }
-        &.endRange {
-          background: $blue;
-          border-radius: 0 6px 6px 0;
+          &.inRange {
+            background: $blue;
+            border-radius: 0;
+          }
+          &.today {
+            color: $blue;
+            border-color: transparent;
+            &:hover {
+              background-color: #e6e6e6;
+            }
+          }
+          &.selected {
+            color: #fff;
+            background: $blue;
+          }
+          &.startRange {
+            border-radius: 6px 0 0 6px;
+          }
+          &.endRange {
+            background: $blue;
+            border-radius: 0 6px 6px 0;
+          }
         }
       }
     }

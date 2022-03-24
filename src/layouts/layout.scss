@@ -30,7 +30,7 @@ img {
 a {
   display: block;
   text-decoration: none;
-  color: $black;
+  color: inherit;
   transition: ease 0.3s;
   &:hover {
     color: $blue;

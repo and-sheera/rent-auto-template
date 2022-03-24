@@ -44,7 +44,7 @@
       }
     }
   }
-  &__text {
+  &__content {
     padding: 10px 10px 0 15px;
     color: $black;
     @include media-tablet {
@@ -78,9 +78,11 @@
   }
   &__desc {
     margin-top: 10px;
-    display: -webkit-box;
     font: 400 16px/1.2 $geometria;
-    -webkit-line-clamp: 4;
+  }
+  &__text {
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
     overflow: hidden;
     @include media-tablet {
