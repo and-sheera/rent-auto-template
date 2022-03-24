@@ -12,7 +12,7 @@
   }
   &__item {
     position: relative;
-    margin-right: 20px;
+    margin-right: 15px;
     padding-right: 20px;
     font: 300 12px/1.2 $geometria;
     white-space: nowrap;
@@ -25,9 +25,6 @@
       width: 4px;
       height: 1px;
       background: #aaa;
-    }
-    @include media-tablet {
-      font-size: 12px;
     }
     &:last-child {
       margin-right: 0;

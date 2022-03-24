@@ -1,4 +1,10 @@
 .popup {
+  top: 130px;
+  height: calc(100vh - 130px);
+  @include media-tablet-horizontal {
+    top: 0;
+    height: 100vh;
+  }
   &-form {
     position: relative;
     width: 410px;

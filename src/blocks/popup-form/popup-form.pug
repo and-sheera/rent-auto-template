@@ -21,7 +21,7 @@ mixin popup-form(mods)
         .popup-form__total-txt Итого:
         .popup-form__total-txt.popup-form__total-txt--grey Выберите авто и укажите даты
       .popup-form__btn
-        +ui-button('арендовать', 'popup-form', true)
+        +ui-button('арендовать', 'popup-form')(href='/order.html')
       .popup-form__agreement Нажимая “Забронировать” я соглашаюсь c&nbsp;
         a(href='#') условиями обработки моих персональных данных
     block

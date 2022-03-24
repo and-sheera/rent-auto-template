@@ -45,7 +45,12 @@
       &-dropdown {
         border: none;
         box-shadow: 0 8px 24px rgb(0 0 0 / 0.05);
-        border-radius: 8px;
+        &--below {
+          border-radius: 0 0 8px 8px;
+        }
+        &--above {
+          border-radius: 8px 8px 0 0;
+        }
       }
       &-results {
         &__options {

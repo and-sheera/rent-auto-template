@@ -15,7 +15,7 @@ mixin order-form(mods)
       .order-form__top
         +ui-h2('персональные данные', 'order-form')
         .order-form__left
-          .order-form__line.order-form__line--fw
+          .order-form__line
             +ui-select('Выберите автомобиль', '--border, --bigger', 'Hyundai', 'Chevrolet', 'Renault')
           .order-form__line
             +ui-datepicker('Начало аренды', 'order-form, --single')
