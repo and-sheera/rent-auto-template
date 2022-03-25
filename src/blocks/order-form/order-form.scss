@@ -98,6 +98,7 @@
       padding: 40px 25px 20px;
       align-items: baseline;
       justify-content: space-between;
+      flex-wrap: wrap;
       @include media-laptop {
         padding: 15px;
       }

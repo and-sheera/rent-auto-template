@@ -11,5 +11,6 @@ mixin ui-tooltip(text, mods)
     }
 
   .ui-tooltip(class=allMods)&attributes(attributes)
-    button(data-tippy-content=text) Test
-    block
+    .ui-tooltip__icon
+    .ui-tooltip__content(style='display: none;') !{text}
+      block

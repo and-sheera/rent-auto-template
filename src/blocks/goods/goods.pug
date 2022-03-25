@@ -1,4 +1,4 @@
-mixin goods(mods)
+mixin goods(type, mods)
   -
     const baseName = 'goods'
     let allMods = ''
@@ -10,38 +10,80 @@ mixin goods(mods)
       allMods = allMods.trim()
     }
 
+  -
+    const itemData={
+      img: 'goods_1.jpg',
+      logo: 'goods-logo_1.png',
+      name: 'HYUNDAI CRETA',
+      type: 'Кроссоверы',
+      desc: '2017 г. в., 6АТ',
+      price: {
+        old: 'от 1 050 ₽',
+        new: 'от 1 650 ₽'
+      }
+    }
+
+  -
+    const itemData2={
+      img: 'goods_2.jpg',
+      logo: 'goods-logo_2.png',
+      name: 'CHEVROLET AVEOCHEVROLET AVEO',
+      type: 'Стандарт',
+      desc: '2015 г. в., 6АТ',
+      price: {
+        old: 'от 1 050 ₽',
+        new: 'от 1 650 ₽'
+      }
+    }
+
   .goods(class=allMods)&attributes(attributes)
     .inner
-      +ui-h2('Самые популярные автомобили', 'goods')
-      .goods__grid
-        -for(let x = 0; x < 4; x++)
-          .goods__item(class=x>1 ? 'goods__item--mb-unvisible' : '')
-            .goods__img
-              img(src='img/goods_1.jpg', alt='')
-            .goods__logo
-              img(src='img/goods-logo_1.png', alt='')
-            .goods__info
-              .goods__name HYUNDAI CRETA
-              .goods__desc.goods__desc--grey Кроссоверы
-              .goods__desc 2017 г. в., 6АТ
-              .goods__bot
-                .goods__price
-                  .goods__price-old от 1 050 ₽
-                  .goods__price-new от 1 650 ₽
-                +ui-button('забронировать', 'goods')
-          .goods__item(class=x>1 ? 'goods__item--mb-unvisible' : '')
-            .goods__img
-              img(src='img/goods_2.jpg', alt='')
-            .goods__logo
-              img(src='img/goods-logo_2.png', alt='')
-            .goods__info
-              .goods__name CHEVROLET AVEO
-              .goods__desc.goods__desc--grey Стандарт
-              .goods__desc 2015 г. в., 6АТ
-              .goods__bot
-                .goods__price
-                  .goods__price-old от 1 050 ₽
-                  .goods__price-new от 1 050 ₽
-                +ui-button('забронировать', 'goods')
-      button.goods__more-btn Показать ещё
+      case type
+        when 'main'
+          +ui-h2('Самые популярные автомобили', 'goods')
+          .goods__grid
+            +goods-item(itemData)
+            +goods-item(itemData2)
+            +goods-item(itemData)
+            +goods-item(itemData2)
+            +goods-item(itemData, '--mb-unvisible')
+            +goods-item(itemData2, '--mb-unvisible')
+            +goods-item(itemData, '--mb-unvisible')
+            +goods-item(itemData2, '--mb-unvisible')
+          button.goods__more-btn Показать ещё
+
+        when 'card-auto'
+          +ui-h2('Похожие автомобили', 'goods, --fw-500')
+          .goods__grid.goods__grid--mb-swipe
+            +goods-item(itemData)
+            +goods-item(itemData2)
+            +goods-item(itemData)
+            +goods-item(itemData2)
     block
+
+mixin goods-item(goodsData, mods)
+  -
+    const baseName = 'goods-item'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  .goods-item(class=allMods)&attributes(attributes)
+    .goods-item__img
+      img(src=`img/${goodsData.img}`, alt='')
+    .goods-item__logo
+      img(src=`img/${goodsData.logo}`, alt='')
+    .goods-item__info
+      .goods-item__name=goodsData.name
+      .goods-item__desc.goods__desc--grey=goodsData.type
+      .goods-item__desc=goodsData.desc
+      .goods-item__bot
+        .goods-item__price
+          .goods-item__price-old=goodsData.price.old
+          .goods-item__price-new=goodsData.price.new
+        +ui-button('забронировать', 'goods-item')

@@ -1,0 +1,131 @@
+mixin auto-card(mods)
+  -
+    const baseName = 'auto-card'
+    let allMods = ''
+    if (typeof mods !== 'undefined' && mods) {
+      const modsList = mods.split(',')
+      for (const element of modsList) {
+        allMods += element.trim()[0] === '-' ? ' ' + baseName + element.trim() : ' ' + element.trim() + '__' + baseName
+      }
+      allMods = allMods.trim()
+    }
+
+  -
+    const price=[
+      {
+        days: '1-2 суток',
+        cost: '1100 ₽'
+      },
+      {
+        days: '3-6 суток',
+        cost: '950 ₽'
+      },
+      {
+        days: '7-14 суток',
+        cost: '800 ₽'
+      },
+      {
+        days: '15-30 суток',
+        cost: '700 ₽'
+      },
+      {
+        days: '31-60 суток',
+        cost: '650 ₽'
+      },
+      {
+        days: 'ТВД',
+        cost: '2000 ₽',
+        tooltip: 'Тариф "Выходного дня": время использования - с 16:00 (пятница) до 12:00 (понедельник) и включает в себя суммарный пробег 600 км.'
+      },
+    ]
+
+  -
+    const features=[
+      {
+        icon: 'feature_1',
+        txt: 'Коробка передач',
+        value: '5'
+      },
+      {
+        icon: 'feature_2',
+        txt: 'Дверей',
+        value: '5'
+      },
+      {
+        icon: 'feature_3',
+        txt: 'Количество мест',
+        value: '5'
+      },
+      {
+        icon: 'feature_4',
+        txt: 'Расход на 100км',
+        value: '7л'
+      },
+      {
+        icon: 'feature_5',
+        txt: 'Объем багажника',
+        value: '300'
+      },
+      {
+        icon: 'feature_6',
+        txt: 'Мощность двигателя',
+        value: '86л.с'
+      },
+      {
+        icon: 'feature_7',
+        txt: 'Цвет кузова',
+        value: 'белый, серый'
+      },
+      {
+        icon: 'feature_8',
+        txt: 'Год выпуска',
+        value: '2015'
+      },
+    ]
+
+  .auto-card(class=allMods)&attributes(attributes)
+    .inner
+      .auto-card__wrapper
+        .auto-card__head
+          .auto-card__category эКОНОМ
+          h2.auto-card__title LIFAN SMILY 1.3 MT
+        .auto-card__car
+          .auto-card__img
+            img(src='img/car.jpg', alt='')
+          .auto-card__details
+            .auto-card__details-txt Заказать Lifan Smily 1.3 MT или получить более подробную информацию Вы&nbsp;можете по телефонам:
+            .auto-card__phones
+              a.auto-card__tel(href='tel:+78129243555') +7 (812) 924-35-55
+              a.auto-card__tel(href='tel:+78129240677') +7 (812) 924-06-77
+              a.auto-card__tel(href='tel:+78129245550') +7 (812) 924-55-50
+        .auto-card__btn.auto-card__btn--fast
+          +ui-button('Арендовать в один клик ', 'auto-card, --tel-icon, --green')
+        .auto-card__btn.auto-card__btn--default
+          +ui-button('Арендовать ', 'auto-card')
+        .auto-card__price
+          .auto-card__subtitle Стоимость аренды
+          .auto-card__tariffs
+            .auto-card__tariffs-item
+              .auto-card__tariffs-name Залог
+              .auto-card__tariffs-cost 5000 ₽
+            .auto-card__tariffs-item
+              .auto-card__tariffs-name Сверх лимита
+              .auto-card__tariffs-cost 4 ₽/км
+                +ui-tooltip('Стандартный лимит 250км в сутки')
+          .auto-card__grid
+            each tile in price
+              .auto-card__tile
+                .auto-card__tile-days=tile.days
+                  if tile.tooltip
+                    +ui-tooltip(tile.tooltip)
+                .auto-card__tile-cost=tile.cost
+        .auto-card__feature
+          .auto-card__subtitle Характеристики
+          .auto-card__feature-wrap
+            each point in features
+              .auto-card__feature-item
+                .auto-card__feature-icon
+                  img(src=`img/svgs/${point.icon}.svg`, alt='')
+                .auto-card__feature-name=point.txt
+                .auto-card__feature-val=point.value
+    block

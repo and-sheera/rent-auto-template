@@ -1,3 +1,51 @@
 .ui-tooltip {
-  position: relative;
+  flex-shrink: 0;
+  display: inline-flex;
+  vertical-align: middle;
+  margin-left: 5px;
+  &__icon {
+    width: 16px;
+    height: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M7.67159 12.4898C8.15692 12.4898 8.5427 12.104 8.5427 11.6062C8.5427 11.1209 8.15692 10.7351 7.67159 10.7351C7.17381 10.7351 6.80048 11.1209 6.80048 11.6062C6.80048 12.104 7.17381 12.4898 7.67159 12.4898ZM8.28136 9.59024V8.44535C8.90359 8.24624 9.4387 7.93513 9.87425 7.51202C10.3223 7.07647 10.5463 6.56624 10.5463 5.95647C10.5463 5.22224 10.2725 4.63735 9.72492 4.2018C9.17737 3.76624 8.51781 3.55469 7.73381 3.55469C6.80048 3.55469 5.99159 3.80358 5.33203 4.28891V5.47113C6.05381 4.99824 6.77559 4.7618 7.50981 4.7618C8.50536 4.7618 9.16492 5.23469 9.16492 6.04358C9.16492 6.46669 8.94092 6.84002 8.50536 7.15113C8.06981 7.46224 7.57203 7.6738 6.98714 7.7858V9.59024H8.28136Z' fill='%233498DB'/%3E%3Ccircle cx='8' cy='8' r='7.5' stroke='%233498DB'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+  }
+  .tippy-box[data-theme~='ui-tooltip'] {
+    font: 400 16px/1.1 $geometria;
+    color: $black;
+    background: #fff;
+    border: 1px solid $blue;
+    border-radius: 6px;
+    @include media-tablet {
+      font-size: 14px;
+    }
+    .tippy {
+      &-content {
+        padding: 7px;
+      }
+      &-arrow {
+        width: 20px;
+        height: 12px;
+        &::before {
+          left: 8px;
+          width: 100%;
+          height: 100%;
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12' fill='none'%3E%3Cmask id='mask0_342_2567' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='20' height='12'%3E%3Crect width='20' height='12' fill='white'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_342_2567)'%3E%3Cpath d='M-245 -0.906668V-21C-245 -23.7614 -242.761 -26 -240 -26H39C41.7614 -26 44 -23.7614 44 -21V-0.906666C44 1.85476 41.7614 4.09333 39 4.09333H19.1306L1.12166 11V4.09333H-240C-242.761 4.09333 -245 1.85476 -245 -0.906668Z' fill='white' stroke='%233498DB'/%3E%3C/g%3E%3C/svg%3E");
+          background-repeat: no-repeat;
+          background-size: cover;
+          border: none;
+        }
+      }
+    }
+    &[data-placement^='top'] {
+      .tippy {
+        &-arrow {
+          &::before {
+            bottom: -9px;
+          }
+        }
+      }
+    }
+  }
 }

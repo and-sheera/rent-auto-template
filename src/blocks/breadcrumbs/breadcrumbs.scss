@@ -6,32 +6,32 @@
   &__list {
     display: flex;
     align-items: center;
-    @include media-tablet {
-      overflow-y: auto;
-    }
+    flex-wrap: wrap;
   }
   &__item {
     position: relative;
     margin-right: 15px;
-    padding-right: 20px;
+    padding-left: 20px;
     font: 300 12px/1.2 $geometria;
     white-space: nowrap;
     &::after {
       content: '';
       position: absolute;
       top: 50%;
-      right: 0;
+      left: 0;
       transform: translateY(-50%);
       width: 4px;
       height: 1px;
       background: #aaa;
     }
-    &:last-child {
-      margin-right: 0;
-      padding-right: 0;
+    &:first-child {
+      padding-left: 0;
       &::after {
         display: none;
       }
+    }
+    &:last-child {
+      margin-right: 0;
     }
   }
   &--grey-bg {

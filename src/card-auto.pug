@@ -1,0 +1,14 @@
+extends layouts/layout
+
+block variables
+  -const pageTitle ='Эконом LIFAN SMILY 1.3 MT'
+
+block content
+  main
+    +breadcrumbs
+      +breadcrumbs-item('Главная', '/')
+      +breadcrumbs-item('Автопарк/Тарифы', '#')
+      +breadcrumbs-item(pageTitle)
+    +auto-card
+    +text-info
+    +goods('card-auto', '--card-auto')
