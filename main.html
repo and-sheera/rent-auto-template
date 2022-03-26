@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Main</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link href="." rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__top">
+          <div class="inner"><a class="header__logo" href="/"><img src="img/svgs/icon_logo.svg" alt=""></a><a class="header__address" href="#">ул. Ново-Рыбинская, д. 19/21, БЦ "Квартал", офис 318</a>
+            <div class="header__contacts"><a class="header__messenger" href="#"><img src="img/svgs/icon_wa.svg" alt=""></a><a class="header__messenger" href="#"><img src="img/svgs/icon_viber.svg" alt=""></a>
+              <div class="drop-phones header__drop-phones"><a class="drop-phones__tel" href="tel:+79119240677">+7 911 924-06-77</a>
+                <div class="drop-phones__open"></div>
+                <div class="drop-phones__drop"><a class="drop-phones__tel" href="tel:+78129243555">+7 812 924-35-55</a><a class="drop-phones__tel" href="tel:+78129245550">+7 812 924-55-50</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__bot">
+          <div class="inner"><a class="header__logo" href="/"><img src="img/svgs/icon_logo--white.svg" alt=""></a>
+            <ul class="header__menu">
+              <li class="header__link"><a href="#">Автопарк / тарифы</a></li>
+              <li class="header__link"><a href="#">Условия аренды</a></li>
+              <li class="header__link"><a href="#">О КОМПАНИИ</a></li>
+              <li class="header__link"><a href="#">Контакты</a></li>
+            </ul>
+            <div class="header__burger-icon"><img src="img/svgs/icon_burger.svg" alt=""></div><a class="ui-button header__ui-button ui-button--green js-popup-form" href="#rent-from">расчет стоимости</a>
+          </div>
+        </div>
+        <div class="header__burger">
+          <div class="header__burger-close"><img src="img/svgs/icon_close.svg" alt=""></div>
+          <div class="inner"><a class="header__burger-logo" href="/"><img src="img/svgs/icon_logo--white.svg" alt=""></a>
+            <ul class="header__burger-menu">
+              <li class="header__burger-link header__burger-link--active"><a href="#">Автопарк / тарифы</a></li>
+              <li class="header__burger-link"><a href="#">Условия аренды</a></li>
+              <li class="header__burger-link"><a href="#">О КОМПАНИИ</a></li>
+              <li class="header__burger-link"><a href="#">Контакты</a></li>
+            </ul>
+            <div class="drop-phones drop-phones--black"><a class="drop-phones__tel" href="tel:+79119240677">+7 911 924-06-77</a>
+              <div class="drop-phones__open"></div>
+              <div class="drop-phones__drop"><a class="drop-phones__tel" href="tel:+78129243555">+7 812 924-35-55</a><a class="drop-phones__tel" href="tel:+78129245550">+7 812 924-55-50</a></div>
+            </div><a class="ui-button ui-button--green js-popup-form" href="#rent-from">расчет стоимости</a>
+          </div>
+        </div>
+        <div class="popup-form" style="display: none;" id="rent-from">
+          <div class="popup-form__inner">
+            <div class="ui-select popup-form__ui-select ui-select--grey ui-select--mob-bigger">
+              <select data-placeholder="Марка авто">
+                <option label="label"></option>
+                <option>Hyundai</option>
+                <option>Chevrolet</option>
+                <option>Renault</option>
+              </select>
+            </div>
+            <div class="ui-select popup-form__ui-select ui-select--grey ui-select--mob-bigger">
+              <select data-placeholder="Выберите модель">
+                <option label="label"></option>
+                <option>Hyundai</option>
+                <option>Chevrolet</option>
+                <option>Renault</option>
+              </select>
+            </div>
+            <div class="popup-form__date">
+              <div class="ui-datepicker popup-form__ui-datepicker ui-datepicker--single">
+                <input id="0ptcm5f"/>
+                <label for="0ptcm5f">Начало аренды</label>
+                <div class="ui-datepicker__icon"><img src="img/svgs/icon_calendar.svg" alt=""/></div>
+              </div>
+              <div class="ui-datepicker popup-form__ui-datepicker ui-datepicker--single">
+                <input id="0vtz65r"/>
+                <label for="0vtz65r">Окончание аренды</label>
+                <div class="ui-datepicker__icon"><img src="img/svgs/icon_calendar.svg" alt=""/></div>
+              </div>
+            </div>
+            <div class="popup-form__total">
+              <div class="popup-form__total-txt">Итого:</div>
+              <div class="popup-form__total-txt popup-form__total-txt--grey">Выберите авто и укажите даты</div>
+            </div>
+            <div class="popup-form__btn"><a class="ui-button popup-form__ui-button" href="/order.html">арендовать</a>
+            </div>
+            <div class="popup-form__agreement">Нажимая “Забронировать” я соглашаюсь c&nbsp;<a href="#">условиями обработки моих персональных данных</a></div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="main-ban">
+          <div class="inner">
+            <h1 class="main-ban__title">Проходимый Renault Duster</h1>
+            <div class="main-ban__subtitle">от  1 750 ₽ / сутки</div>
+            <button class="ui-button main-ban__ui-button">подробнее
+            </button>
+          </div>
+          <div class="main-ban__img"><img class="main-ban__img-desk" src="img/main-ban.jpg" alt=""/><img class="main-ban__img-mob" src="img/main-ban_mob.jpg" alt=""/></div>
+        </div>
+        <div class="main-choice">
+          <div class="main-choice__item">
+            <div class="main-choice__label">Марка автомобиля</div>
+            <div class="ui-select main-choice__ui-select">
+              <select data-placeholder="Марка">
+                <option label="label"></option>
+                <option>Hyundai</option>
+                <option>Chevrolet</option>
+                <option>Renault</option>
+              </select>
+            </div>
+          </div>
+          <div class="main-choice__item">
+            <div class="main-choice__label">Класс автомобиля</div>
+            <div class="ui-select main-choice__ui-select">
+              <select data-placeholder="Эконом">
+                <option label="label"></option>
+                <option>Эконом</option>
+                <option>Стандарт </option>
+                <option>Комфорт</option>
+                <option>Бизнес</option>
+              </select>
+            </div>
+          </div>
+          <div class="main-choice__item">
+            <div class="main-choice__label">Стоимость аренды в сутки</div>
+            <div class="ui-range main-choice__ui-range" id="rent" data-min="1000" data-max="5000" data-start-top="1050" data-start-bot="4050">
+              <div class="ui-range__wrap">
+                <div class="ui-range__val"><span class="ui-range__val-lower"></span><span class="ui-range__val-unit">₽</span></div>
+                <div class="ui-range__val"><span class="ui-range__val-upper"></span><span class="ui-range__val-unit">₽</span></div>
+              </div>
+              <div class="ui-range-body"></div>
+            </div>
+          </div>
+        </div>
+        <div class="goods">
+          <div class="inner">
+            <h2 class="ui-h2 goods__ui-h2">Самые популярные автомобили
+            </h2>
+            <div class="goods__grid">
+              <div class="goods-item">
+                <div class="goods-item__img"><img src="img/goods_1.jpg" alt=""/></div>
+                <div class="goods-item__logo"><img src="img/goods-logo_1.png" alt=""/></div>
+                <div class="goods-item__info">
+                  <div class="goods-item__name">HYUNDAI CRETA</div>
+                  <div class="goods-item__desc goods__desc--grey">Кроссоверы</div>
+                  <div class="goods-item__desc">2017 г. в., 6АТ</div>
+                  <div class="goods-item__bot">
+                    <div class="goods-item__price">
+                      <div class="goods-item__price-old">от 1 050 ₽</div>
+                      <div class="goods-item__price-new">от 1 650 ₽</div>
+                    </div>
+                    <button class="ui-button goods-item__ui-button">забронировать
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="goods-item">
+                <div class="goods-item__img"><img src="img/goods_2.jpg" alt=""/></div>
+                <div class="goods-item__logo"><img src="img/goods-logo_2.png" alt=""/></div>
+                <div class="goods-item__info">
+                  <div class="goods-item__name">CHEVROLET AVEOCHEVROLET AVEO</div>
+                  <div class="goods-item__desc goods__desc--grey">Стандарт</div>
+                  <div class="goods-item__desc">2015 г. в., 6АТ</div>
+                  <div class="goods-item__bot">
+                    <div class="goods-item__price">
+                      <div class="goods-item__price-old">от 1 050 ₽</div>
+                      <div class="goods-item__price-new">от 1 650 ₽</div>
+                    </div>
+                    <button class="ui-button goods-item__ui-button">забронировать
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="goods-item">
+                <div class="goods-item__img"><img src="img/goods_1.jpg" alt=""/></div>
+                <div class="goods-item__logo"><img src="img/goods-logo_1.png" alt=""/></div>
+                <div class="goods-item__info">
+                  <div class="goods-item__name">HYUNDAI CRETA</div>
+                  <div class="goods-item__desc goods__desc--grey">Кроссоверы</div>
+                  <div class="goods-item__desc">2017 г. в., 6АТ</div>
+                  <div class="goods-item__bot">
+                    <div class="goods-item__price">
+                      <div class="goods-item__price-old">от 1 050 ₽</div>
+                      <div class="goods-item__price-new">от 1 650 ₽</div>
+                    </div>
+                    <button class="ui-button goods-item__ui-button">забронировать
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="goods-item">
+                <div class="goods-item__img"><img src="img/goods_2.jpg" alt=""/></div>
+                <div class="goods-item__logo"><img src="img/goods-logo_2.png" alt=""/></div>
+                <div class="goods-item__info">
+                  <div class="goods-item__name">CHEVROLET AVEOCHEVROLET AVEO</div>
+                  <div class="goods-item__desc goods__desc--grey">Стандарт</div>
+                  <div class="goods-item__desc">2015 г. в., 6АТ</div>
+                  <div class="goods-item__bot">
+                    <div class="goods-item__price">
+                      <div class="goods-item__price-old">от 1 050 ₽</div>
+                      <div class="goods-item__price-new">от 1 650 ₽</div>
+                    </div>
+                    <button class="ui-button goods-item__ui-button">забронировать
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="goods-item goods-item--mb-unvisible">
+                <div class="goods-item__img"><img src="img/goods_1.jpg" alt=""/></div>
+                <div class="goods-item__logo"><img src="img/goods-logo_1.png" alt=""/></div>
+                <div class="goods-item__info">
+                  <div class="goods-item__name">HYUNDAI CRETA</div>
+                  <div class="goods-item__desc goods__desc--grey">Кроссоверы</div>
+                  <div class="goods-item__desc">2017 г. в., 6АТ</div>
+                  <div class="goods-item__bot">
+                    <div class="goods-item__price">
+                      <div class="goods-item__price-old">от 1 050 ₽</div>
+                      <div class="goods-item__price-new">от 1 650 ₽</div>
+                    </div>
+                    <button class="ui-button goods-item__ui-button">забронировать
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="goods-item goods-item--mb-unvisible">
+                <div class="goods-item__img"><img src="img/goods_2.jpg" alt=""/></div>
+                <div class="goods-item__logo"><img src="img/goods-logo_2.png" alt=""/></div>
+                <div class="goods-item__info">
+                  <div class="goods-item__name">CHEVROLET AVEOCHEVROLET AVEO</div>
+                  <div class="goods-item__desc goods__desc--grey">Стандарт</div>
+                  <div class="goods-item__desc">2015 г. в., 6АТ</div>
+                  <div class="goods-item__bot">
+                    <div class="goods-item__price">
+                      <div class="goods-item__price-old">от 1 050 ₽</div>
+                      <div class="goods-item__price-new">от 1 650 ₽</div>
+                    </div>
+                    <button class="ui-button goods-item__ui-button">забронировать
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="goods-item goods-item--mb-unvisible">
+                <div class="goods-item__img"><img src="img/goods_1.jpg" alt=""/></div>
+                <div class="goods-item__logo"><img src="img/goods-logo_1.png" alt=""/></div>
+                <div class="goods-item__info">
+                  <div class="goods-item__name">HYUNDAI CRETA</div>
+                  <div class="goods-item__desc goods__desc--grey">Кроссоверы</div>
+                  <div class="goods-item__desc">2017 г. в., 6АТ</div>
+                  <div class="goods-item__bot">
+                    <div class="goods-item__price">
+                      <div class="goods-item__price-old">от 1 050 ₽</div>
+                      <div class="goods-item__price-new">от 1 650 ₽</div>
+                    </div>
+                    <button class="ui-button goods-item__ui-button">забронировать
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="goods-item goods-item--mb-unvisible">
+                <div class="goods-item__img"><img src="img/goods_2.jpg" alt=""/></div>
+                <div class="goods-item__logo"><img src="img/goods-logo_2.png" alt=""/></div>
+                <div class="goods-item__info">
+                  <div class="goods-item__name">CHEVROLET AVEOCHEVROLET AVEO</div>
+                  <div class="goods-item__desc goods__desc--grey">Стандарт</div>
+                  <div class="goods-item__desc">2015 г. в., 6АТ</div>
+                  <div class="goods-item__bot">
+                    <div class="goods-item__price">
+                      <div class="goods-item__price-old">от 1 050 ₽</div>
+                      <div class="goods-item__price-new">от 1 650 ₽</div>
+                    </div>
+                    <button class="ui-button goods-item__ui-button">забронировать
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="goods__more-btn">Показать ещё</button>
+          </div>
+        </div>
+        <div class="car-park">
+          <div class="inner">
+            <h2 class="ui-h2 car-park__ui-h2">автопарк
+            </h2>
+            <div class="slider car-park__slider">
+              <div class="swiper">
+                <div class="swiper-wrapper"><a class="swiper-slide" href="#">
+                    <div class="slider__img"><img src="img/car-park_1.jpg" alt=""/></div>
+                    <div class="slider__title">Эконом</div></a><a class="swiper-slide" href="#">
+                    <div class="slider__img"><img src="img/car-park_2.jpg" alt=""/></div>
+                    <div class="slider__title">Стандарт</div></a><a class="swiper-slide" href="#">
+                    <div class="slider__img"><img src="img/car-park_3.jpg" alt=""/></div>
+                    <div class="slider__title">Комфорт </div></a><a class="swiper-slide" href="#">
+                    <div class="slider__img"><img src="img/car-park_4.jpg" alt=""/></div>
+                    <div class="slider__title">Бизнес</div></a>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="required-docs">
+          <div class="inner">
+            <h2 class="ui-h2 required-docs__ui-h2">КАКИЕ ДОКУМЕНТЫ НУЖНЫ
+            </h2>
+            <div class="required-docs__subtitle">Для того чтобы оформить аренду авто без водителя потребуются следующие документы:</div>
+            <div class="required-docs__wrapper">
+              <div class="required-docs__item">
+                <div class="required-docs__icon"><img src="img/svgs/icon_docs-1.svg" alt=""/></div>
+                <div class="required-docs__txt">Действующий паспорт</div>
+              </div>
+              <div class="required-docs__item">
+                <div class="required-docs__icon"><img src="img/svgs/icon_docs-2.svg" alt=""/></div>
+                <div class="required-docs__txt">Водительское удостоверение категории “В”</div>
+              </div>
+              <div class="required-docs__item">
+                <div class="required-docs__icon"><img src="img/svgs/icon_docs-3.svg" alt=""/></div>
+                <div class="required-docs__txt">22+ Возраст <br> 2+ Стаж вождения</div>
+              </div>
+              <div class="required-docs__item">
+                <div class="required-docs__icon"><img src="img/svgs/icon_docs-4.svg" alt=""/></div>
+                <div class="required-docs__txt">Поехали</div>
+              </div>
+            </div>
+            <div class="required-docs__footnote">*Начиная с 25 лет, клиенту предоставляется возможность взять в прокат машину представительского класса.</div>
+          </div>
+        </div>
+        <div class="contact-us">
+          <div class="inner">
+            <div class="contact-us__wrapper">
+              <div class="contact-us__info">
+                <h2 class="ui-h2 contact-us__ui-h2">Остались вопросы?
+                </h2>
+                <div class="contact-us__txt">Оставьте заявку на консультацию.<br/>Наши специалисты свяжутся с&nbsp;Вами и&nbsp;ответят на все интирисующие вопросы</div>
+                <div class="contact-us__img"><img src="img/contact-us.png" alt=""/></div>
+              </div>
+              <form class="contact-us__form">
+                <div class="ui-input contact-us__ui-input">
+                  <input id="name" type="text"/>
+                  <label for="name">Имя</label>
+                </div>
+                <div class="ui-input contact-us__ui-input">
+                  <input id="phone" type="text"/>
+                  <label for="phone">Контактный телефон</label>
+                </div>
+                <input class="ui-button contact-us__ui-button" type="submit" value="забронировать"/>
+                <div class="ui-checkbox contact-us__ui-checkbox">
+                  <input id="agree" name="agree" type="checkbox"/>
+                  <label for="agree">Согласен с политикой конфиденциальности
+                  </label>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="benefits">
+          <div class="inner">
+            <h2 class="ui-h2 benefits__ui-h2">НАШИ ПРЕИМУЩЕСТВА
+            </h2>
+            <div class="benefits__wrapper">
+              <div class="benefits__item">
+                <div class="benefits__icon"><img src="img/svgs/icon_benefits-1.svg" alt=""/></div>
+                <div class="benefits__txt">Автомобили застрахованы по КАСКО и ОСАГО</div>
+              </div>
+              <div class="benefits__item">
+                <div class="benefits__icon"><img src="img/svgs/icon_benefits-2.svg" alt=""/></div>
+                <div class="benefits__txt">Дисконтная система для&nbsp;постоянных клиентов</div>
+              </div>
+              <div class="benefits__item">
+                <div class="benefits__icon"><img src="img/svgs/icon_benefits-3.svg" alt=""/></div>
+                <div class="benefits__txt">Только новые <br> автомобили</div>
+              </div>
+              <div class="benefits__item">
+                <div class="benefits__icon"><img src="img/svgs/icon_benefits-4.svg" alt=""/></div>
+                <div class="benefits__txt">Специальные условия для юридических лиц</div>
+              </div>
+              <div class="benefits__item">
+                <div class="benefits__icon"><img src="img/svgs/icon_benefits-5.svg" alt=""/></div>
+                <div class="benefits__txt">Эксклюзивные условия при длительной аренде</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contract">
+          <div class="inner">
+            <div class="contract__wrapper">
+              <div class="contract__info">
+                <h2 class="ui-h2 contract__ui-h2 ui-h2--hr ui-h2--bigger">ДОПОЛНИТЕЛЬНЫЕ УСЛОВИЯ ПРИ ЗАКЛЮЧЕНИИ ДОГОВОРА
+                </h2>
+                <div class="contract__txt">
+                  <p>Стороны обговаривают дополнительные&nbsp;условия, которые будут предусмотрены и указаны в договоре.</p>
+                  <p>В некоторых случаях компания предлагает клиенту услугу снижения ответственности в случае ДТП. Если клиент, взявший авто в прокат, не является виновником ДТП, с него снимается материальная ответственность по возмещению причинённого ущерба. Наличие такой услуги уточняется и обговаривается заблаговременно с компанией.</p>
+                  <p>Клиенту рекомендуется внимательно ознакомиться со всеми пунктами договора, обратить внимание на наличие страховки. Только после внимательного изучения договора можно приступить к его подписанию.</p>
+                </div>
+              </div>
+              <div class="contract__img"><img src="img/contract.jpg" alt=""/></div>
+            </div>
+          </div>
+        </div>
+        <div class="promo-rent">
+          <div class="inner">
+            <div class="slider promo-rent__slider">
+              <div class="swiper">
+                <div class="swiper-wrapper"><a class="swiper-slide" href="#">
+                    <div class="slider__img"><img src="img/promo-rent_1.jpg" alt=""/></div>
+                    <div class="slider__title">Аренда авто на сутки</div></a><a class="swiper-slide" href="#">
+                    <div class="slider__img"><img src="img/promo-rent_2.jpg" alt=""/></div>
+                    <div class="slider__title">Аренда авто на выходные</div></a><a class="swiper-slide" href="#">
+                    <div class="slider__img"><img src="img/promo-rent_3.jpg" alt=""/></div>
+                    <div class="slider__title">Аренда авто на неделю </div></a><a class="swiper-slide" href="#">
+                    <div class="slider__img"><img src="img/promo-rent_4.jpg" alt=""/></div>
+                    <div class="slider__title">Аренда авто на месяц</div></a>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="info-promo">
+          <div class="inner">
+            <div class="info-promo__container">
+              <div class="info-promo__col">
+                <h2 class="ui-h2 info-promo__ui-h2">ПОЛЕЗНАЯ ИНФОРМАЦИЯ
+                </h2>
+                <div class="info-promo__wrapper"><a class="info-promo__item" href="#">
+                    <div class="info-promo__img"><img src="img/info-promo_1.jpg" alt=""/></div>
+                    <div class="info-promo__content">
+                      <div class="info-promo__date">Январь 30, 2020 г.</div>
+                      <div class="info-promo__text">
+                        <div class="info-promo__title">Аренда минивэнов и&nbsp;микроавтобусов для путешествий всей семьёй</div>
+                        <div class="info-promo__desc">Аренда минивэнов и микроавтобусов пользуется небывалым спросом в автомобильной области.</div>
+                      </div>
+                    </div></a><a class="info-promo__item info-promo__item--mb-hidden" href="#">
+                    <div class="info-promo__img"><img src="img/info-promo_1.jpg" alt=""/></div>
+                    <div class="info-promo__content">
+                      <div class="info-promo__date">Январь 30, 2020 г.</div>
+                      <div class="info-promo__text">
+                        <div class="info-promo__title">Аренда минивэнов и&nbsp;микроавтобусов для путешествий всей семьёй</div>
+                        <div class="info-promo__desc">Аренда минивэнов и микроавтобусов пользуется небывалым спросом в автомобильной области.</div>
+                      </div>
+                    </div></a>
+                </div>
+                <button class="ui-button info-promo__ui-button">смотреть всё
+                </button>
+              </div>
+              <div class="info-promo__col">
+                <h2 class="ui-h2 info-promo__ui-h2">АКЦИИ
+                </h2>
+                <div class="info-promo__wrapper"><a class="info-promo__item" href="#">
+                    <div class="info-promo__img"><img src="img/info-promo_2.jpg" alt=""/></div>
+                    <div class="info-promo__content">
+                      <div class="info-promo__date">Январь 30, 2020 г.</div>
+                      <div class="info-promo__text">
+                        <div class="info-promo__title">2019 год уже начинается с&nbsp;подарков!</div>
+                        <div class="info-promo__desc">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях.</div>
+                      </div>
+                    </div></a><a class="info-promo__item info-promo__item--mb-hidden" href="#">
+                    <div class="info-promo__img"><img src="img/info-promo_2.jpg" alt=""/></div>
+                    <div class="info-promo__content">
+                      <div class="info-promo__date">Январь 30, 2020 г.</div>
+                      <div class="info-promo__text">
+                        <div class="info-promo__title">2019 год уже начинается с&nbsp;подарков!</div>
+                        <div class="info-promo__desc">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на русском языке, а начинающему оратору отточить навык публичных выступлений в домашних условиях.</div>
+                      </div>
+                    </div></a>
+                </div>
+                <button class="ui-button info-promo__ui-button">смотреть всё
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="inner">
+          <ul class="footer__menu">
+            <li class="footer__link"><a href="#">Автопарк / тарифы</a></li>
+            <li class="footer__link"><a href="#">Расчёт стоимости</a></li>
+            <li class="footer__link"><a href="#">Заявка</a></li>
+            <li class="footer__link"><a href="#">Условия аренды</a></li>
+            <li class="footer__link"><a href="#">О КОМПАНИИ</a></li>
+            <li class="footer__link"><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__content">
+          <div class="inner">
+            <div class="footer__top"><a class="footer__logo" href="/"><img src="img/svgs/icon_logo.svg" alt=""></a>
+              <div class="footer__contacts">
+                <div class="footer__socials"><a class="footer__mess" href="#"><img src="img/svgs/icon_wa.svg" alt=""></a><a class="footer__mess" href="#"><img src="img/svgs/icon_viber.svg" alt=""></a></div>
+                <div class="drop-phones drop-phones--grey"><a class="drop-phones__tel" href="tel:+79119240677">+7 911 924-06-77</a>
+                  <div class="drop-phones__open"></div>
+                  <div class="drop-phones__drop"><a class="drop-phones__tel" href="tel:+78129243555">+7 812 924-35-55</a><a class="drop-phones__tel" href="tel:+78129245550">+7 812 924-55-50</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="footer__bot"><a class="footer__address" href="#">ул. Ново-Рыбинская, д. 19/21, БЦ&nbsp;"Квартал", офис 318</a>
+              <div class="footer__policy"><a class="footer__policy-item" href="#">Политика конфиденциальности</a><a class="footer__policy-item" href="#">Пользовательское соглашение</a></div>
+              <div class="footer__made">
+                <div class="footer__made-txt">Разработка сайта</div><a class="footer__made-link" href="#"><img src="img/svgs/icon_made-logo.svg" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__footnote">
+          <div class="inner">
+            <div class="footer__footnote-txt">Информация, представленная на сайте, не&nbsp;является публичной офертой.</div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/svg4everybody/2.1.9/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

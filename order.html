@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>Заявка</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link href="." rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.min.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__top">
+          <div class="inner"><a class="header__logo" href="/"><img src="img/svgs/icon_logo.svg" alt=""></a><a class="header__address" href="#">ул. Ново-Рыбинская, д. 19/21, БЦ "Квартал", офис 318</a>
+            <div class="header__contacts"><a class="header__messenger" href="#"><img src="img/svgs/icon_wa.svg" alt=""></a><a class="header__messenger" href="#"><img src="img/svgs/icon_viber.svg" alt=""></a>
+              <div class="drop-phones header__drop-phones"><a class="drop-phones__tel" href="tel:+79119240677">+7 911 924-06-77</a>
+                <div class="drop-phones__open"></div>
+                <div class="drop-phones__drop"><a class="drop-phones__tel" href="tel:+78129243555">+7 812 924-35-55</a><a class="drop-phones__tel" href="tel:+78129245550">+7 812 924-55-50</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__bot">
+          <div class="inner"><a class="header__logo" href="/"><img src="img/svgs/icon_logo--white.svg" alt=""></a>
+            <ul class="header__menu">
+              <li class="header__link"><a href="#">Автопарк / тарифы</a></li>
+              <li class="header__link"><a href="#">Условия аренды</a></li>
+              <li class="header__link"><a href="#">О КОМПАНИИ</a></li>
+              <li class="header__link"><a href="#">Контакты</a></li>
+            </ul>
+            <div class="header__burger-icon"><img src="img/svgs/icon_burger.svg" alt=""></div><a class="ui-button header__ui-button ui-button--green js-popup-form" href="#rent-from">расчет стоимости</a>
+          </div>
+        </div>
+        <div class="header__burger">
+          <div class="header__burger-close"><img src="img/svgs/icon_close.svg" alt=""></div>
+          <div class="inner"><a class="header__burger-logo" href="/"><img src="img/svgs/icon_logo--white.svg" alt=""></a>
+            <ul class="header__burger-menu">
+              <li class="header__burger-link header__burger-link--active"><a href="#">Автопарк / тарифы</a></li>
+              <li class="header__burger-link"><a href="#">Условия аренды</a></li>
+              <li class="header__burger-link"><a href="#">О КОМПАНИИ</a></li>
+              <li class="header__burger-link"><a href="#">Контакты</a></li>
+            </ul>
+            <div class="drop-phones drop-phones--black"><a class="drop-phones__tel" href="tel:+79119240677">+7 911 924-06-77</a>
+              <div class="drop-phones__open"></div>
+              <div class="drop-phones__drop"><a class="drop-phones__tel" href="tel:+78129243555">+7 812 924-35-55</a><a class="drop-phones__tel" href="tel:+78129245550">+7 812 924-55-50</a></div>
+            </div><a class="ui-button ui-button--green js-popup-form" href="#rent-from">расчет стоимости</a>
+          </div>
+        </div>
+        <div class="popup-form" style="display: none;" id="rent-from">
+          <div class="popup-form__inner">
+            <div class="ui-select popup-form__ui-select ui-select--grey ui-select--mob-bigger">
+              <select data-placeholder="Марка авто">
+                <option label="label"></option>
+                <option>Hyundai</option>
+                <option>Chevrolet</option>
+                <option>Renault</option>
+              </select>
+            </div>
+            <div class="ui-select popup-form__ui-select ui-select--grey ui-select--mob-bigger">
+              <select data-placeholder="Выберите модель">
+                <option label="label"></option>
+                <option>Hyundai</option>
+                <option>Chevrolet</option>
+                <option>Renault</option>
+              </select>
+            </div>
+            <div class="popup-form__date">
+              <div class="ui-datepicker popup-form__ui-datepicker ui-datepicker--single">
+                <input id="04z40i6"/>
+                <label for="04z40i6">Начало аренды</label>
+                <div class="ui-datepicker__icon"><img src="img/svgs/icon_calendar.svg" alt=""/></div>
+              </div>
+              <div class="ui-datepicker popup-form__ui-datepicker ui-datepicker--single">
+                <input id="0v852m2"/>
+                <label for="0v852m2">Окончание аренды</label>
+                <div class="ui-datepicker__icon"><img src="img/svgs/icon_calendar.svg" alt=""/></div>
+              </div>
+            </div>
+            <div class="popup-form__total">
+              <div class="popup-form__total-txt">Итого:</div>
+              <div class="popup-form__total-txt popup-form__total-txt--grey">Выберите авто и укажите даты</div>
+            </div>
+            <div class="popup-form__btn"><a class="ui-button popup-form__ui-button" href="/order.html">арендовать</a>
+            </div>
+            <div class="popup-form__agreement">Нажимая “Забронировать” я соглашаюсь c&nbsp;<a href="#">условиями обработки моих персональных данных</a></div>
+          </div>
+        </div>
+      </header>
+      <main>
+        <div class="breadcrumbs breadcrumbs--grey-bg">
+          <div class="inner">
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/">Главная</a>
+              </li>
+              <li class="breadcrumbs__item"><span class="breadcrumbs__text">Заявка</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <form class="order-form">
+          <div class="inner">
+            <div class="order-form__top">
+              <h2 class="ui-h2 order-form__ui-h2">персональные данные
+              </h2>
+              <div class="order-form__left">
+                <div class="order-form__line">
+                  <div class="ui-select ui-select--border ui-select--bigger">
+                    <select>
+                      <option label="label"></option>
+                      <option>Hyundai</option>
+                      <option>Chevrolet</option>
+                      <option>Renault</option>
+                    </select>
+                    <label>Выберите автомобиль</label>
+                  </div>
+                </div>
+                <div class="order-form__line">
+                  <div class="ui-datepicker order-form__ui-datepicker ui-datepicker--single">
+                    <input id="0wqdqhn"/>
+                    <label for="0wqdqhn">Начало аренды</label>
+                    <div class="ui-datepicker__icon"><img src="img/svgs/icon_calendar.svg" alt=""/></div>
+                  </div>
+                  <div class="ui-datepicker order-form__ui-datepicker ui-datepicker--single">
+                    <input id="08qlv9z"/>
+                    <label for="08qlv9z">Окончание аренды</label>
+                    <div class="ui-datepicker__icon"><img src="img/svgs/icon_calendar.svg" alt=""/></div>
+                  </div>
+                </div>
+                <div class="order-form__line">
+                  <div class="ui-input order-form__ui-input ui-input--time">
+                    <input id="time-start" type="text"/>
+                    <label for="time-start">Время начала аренды</label>
+                  </div>
+                  <div class="ui-input order-form__ui-input ui-input--time">
+                    <input id="time-end" type="text"/>
+                    <label for="time-end">Время окончания аренды</label>
+                  </div>
+                </div>
+                <div class="order-form__line">
+                  <div class="ui-input order-form__ui-input">
+                    <input id="name" type="text"/>
+                    <label for="name">ФИО</label>
+                  </div>
+                  <div class="ui-input order-form__ui-input">
+                    <input id="bday" type="text"/>
+                    <label for="bday">Дата рождения</label>
+                  </div>
+                </div>
+                <div class="order-form__line">
+                  <div class="ui-input order-form__ui-input">
+                    <input id="tel" type="text"/>
+                    <label for="tel">Телефон</label>
+                  </div>
+                  <div class="ui-input order-form__ui-input">
+                    <input id="mail" type="text"/>
+                    <label for="mail">E-mail <span class="thin">*необязательно</span></label>
+                  </div>
+                </div>
+              </div>
+              <div class="order-form__ban">
+                <div class="order-form__ban-img"><img src="img/car.jpg" alt=""/></div>
+                <div class="order-form__ban-total">
+                  <div class="order-form__ban-txt">Итоговая стоимость</div>
+                  <div class="order-form__ban-price">500 000 ₽</div>
+                </div>
+              </div>
+            </div>
+            <div class="order-form__block">
+              <div class="order-form__line">
+                <div class="ui-input order-form__ui-input">
+                  <input id="passport" type="text"/>
+                  <label for="passport">Серия и номер паспорта</label>
+                </div>
+                <div class="ui-input order-form__ui-input">
+                  <input id="passport-data" type="text"/>
+                  <label for="passport-data">Кем выдан</label>
+                </div>
+                <div class="ui-input order-form__ui-input">
+                  <input id="passport-data-2" type="text"/>
+                  <label for="passport-data-2">Когда выдан</label>
+                </div>
+              </div>
+              <div class="order-form__line">
+                <div class="ui-input order-form__ui-input">
+                  <input id="address" type="text"/>
+                  <label for="address">Адрес прописки</label>
+                </div>
+                <div class="ui-input order-form__ui-input">
+                  <input id="addres-fact" type="text"/>
+                  <label for="addres-fact">Фактический адрес</label>
+                </div>
+              </div>
+            </div>
+            <div class="order-form__block">
+              <div class="order-form__line">
+                <div class="ui-input order-form__ui-input">
+                  <input id="work" type="text"/>
+                  <label for="work">Место работы (название организации)</label>
+                </div>
+                <div class="ui-input order-form__ui-input">
+                  <input id="work-address" type="text"/>
+                  <label for="work-address">Адрес компании</label>
+                </div>
+                <div class="ui-input order-form__ui-input">
+                  <input id="position" type="text"/>
+                  <label for="position">Должность</label>
+                </div>
+              </div>
+            </div>
+            <div class="order-form__block">
+              <div class="order-form__line">
+                <div class="ui-input order-form__ui-input">
+                  <input id="driver" type="text"/>
+                  <label for="driver">Серия и номер водительского уд.</label>
+                </div>
+                <div class="ui-input order-form__ui-input">
+                  <input id="driver-date" type="text"/>
+                  <label for="driver-date">Когда выдано</label>
+                </div>
+                <div class="ui-select order-form__ui-select ui-select--border ui-select--right-arrow">
+                  <select>
+                    <option label="label"></option>
+                    <option>2017</option>
+                    <option>2018</option>
+                    <option>2019</option>
+                  </select>
+                  <label>Стаж вождения</label>
+                </div>
+                <div class="ui-input order-form__ui-input">
+                  <input id="territory" type="text"/>
+                  <label for="territory">Территория эксплуатации</label>
+                </div>
+              </div>
+            </div>
+            <div class="order-form__block">
+              <input class="ui-button order-form__ui-button" type="submit" value="Отправить"/>
+              <div class="ui-checkbox order-form__ui-checkbox">
+                <input id="agree" name="agree" type="checkbox"/>
+                <label for="agree">Согласен с политикой конфиденциальности
+                </label>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="steps">
+          <div class="inner">
+            <div class="steps__item">
+              <h2 class="ui-h2 steps__ui-h2 ui-h2--centered ui-h2--hr">ОСТАВЬ <span class="text-nowrap">ОНЛАЙН-ЗАЯВКУ</span> НА&nbsp;САЙТЕ
+              </h2>
+              <div class="ui-text">Теперь вам не обязательно заранее приезжать в прокат авто, чтобы выбрать подходящую модель. Теперь это можно сделать в режиме онлайн. Вы можете подробно ознакомиться с любым представленным автомобилем, а потом просто выбрать в заявке тот, который вам наиболее понравился. Кроме того, там же необходимо указать срок аренды, на который вы хотите взять машину, и свои контактные данные (в том числе паспорт и водительские права). После чего с вами обязательно свяжется наш менеджер. При этом вы можете выбрать время, в какое вам удобнее будет перезвонить. После уточнения определенных моментов и получения разрешения, чтобы взять авто в аренду, вы указать место, откуда и когда вам удобнее будет забрать машину.
+              </div>
+            </div>
+            <div class="steps__item">
+              <h2 class="ui-h2 steps__ui-h2 ui-h2--centered ui-h2--hr">ВНЕСИ ОПЛАТУ
+              </h2>
+              <div class="ui-text">Для того чтобы упростить процесс оплаты для иногородних гостей и просто чтобы сэкономить ваше время, мы предлагаем вам безналичный расчет. Благодаря этому вы можете заранее спланировать свое путешествие или рабочий день, избавив себя от необходимости приезжать непосредственно в офис. В совокупности с возможностью выбрать автомобиль онлайн, услуга будет крайне удобна для людей, приезжающих в командировку, которая оплачивается работодателем. Как минимум, все возникающие вопросы можно будет обсудить до поездки, а не в чужом городе на удаленном расстоянии.
+              </div>
+            </div>
+            <div class="steps__item">
+              <h2 class="ui-h2 steps__ui-h2 ui-h2--centered ui-h2--hr">ПОЛУЧИ МАШИНУ В&nbsp;АРЕНДУ
+              </h2>
+              <div class="ui-text">
+                <p>Последний шаг самый простой. Вам всего лишь необходимо забрать авто в определенное время (о котором вы договоритесь с нашим менеджером) и месте, которое вам удобно. Там вас уже будет ожидать чистый автомобиль с полностью заправленным бензобаком.</p>
+                <p>Как вы видите, все достаточно просто. А всё потому, что мы доверяем нашим клиентам и хотим, чтобы нам легко было взаимодействовать друг с другом. Всего три шага и никаких бюрократических сложностей – вот почему к нам обращаются снова и снова. А мы, в свою очередь,  идем навстречу и всегда рады помочь с выбором наиболее подходящего автомобиля.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="inner">
+          <ul class="footer__menu">
+            <li class="footer__link"><a href="#">Автопарк / тарифы</a></li>
+            <li class="footer__link"><a href="#">Расчёт стоимости</a></li>
+            <li class="footer__link"><a href="#">Заявка</a></li>
+            <li class="footer__link"><a href="#">Условия аренды</a></li>
+            <li class="footer__link"><a href="#">О КОМПАНИИ</a></li>
+            <li class="footer__link"><a href="#">Контакты</a></li>
+          </ul>
+        </div>
+        <div class="footer__content">
+          <div class="inner">
+            <div class="footer__top"><a class="footer__logo" href="/"><img src="img/svgs/icon_logo.svg" alt=""></a>
+              <div class="footer__contacts">
+                <div class="footer__socials"><a class="footer__mess" href="#"><img src="img/svgs/icon_wa.svg" alt=""></a><a class="footer__mess" href="#"><img src="img/svgs/icon_viber.svg" alt=""></a></div>
+                <div class="drop-phones drop-phones--grey"><a class="drop-phones__tel" href="tel:+79119240677">+7 911 924-06-77</a>
+                  <div class="drop-phones__open"></div>
+                  <div class="drop-phones__drop"><a class="drop-phones__tel" href="tel:+78129243555">+7 812 924-35-55</a><a class="drop-phones__tel" href="tel:+78129245550">+7 812 924-55-50</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="footer__bot"><a class="footer__address" href="#">ул. Ново-Рыбинская, д. 19/21, БЦ&nbsp;"Квартал", офис 318</a>
+              <div class="footer__policy"><a class="footer__policy-item" href="#">Политика конфиденциальности</a><a class="footer__policy-item" href="#">Пользовательское соглашение</a></div>
+              <div class="footer__made">
+                <div class="footer__made-txt">Разработка сайта</div><a class="footer__made-link" href="#"><img src="img/svgs/icon_made-logo.svg" alt=""></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__footnote">
+          <div class="inner">
+            <div class="footer__footnote-txt">Информация, представленная на сайте, не&nbsp;является публичной офертой.</div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/svg4everybody/2.1.9/svg4everybody.min.js"></script>
+    <script>svg4everybody();</script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
