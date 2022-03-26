@@ -21,8 +21,10 @@ mixin order-form(mods)
             +ui-datepicker('Начало аренды', 'order-form, --single')
             +ui-datepicker('Окончание аренды', 'order-form, --single')
           .order-form__line
-            +ui-datepicker('Время начала аренды', 'order-form, --time')(placeholder='--:--')
-            +ui-datepicker('Время окончания аренды', 'order-form, --time')(placeholder='--:--')
+            //- +ui-datepicker('Время начала аренды', 'order-form, --time')(type='time')
+            +ui-input('time-start', 'Время начала аренды', 'order-form, --time')
+            +ui-input('time-end', 'Время окончания аренды', 'order-form, --time')
+            //- +ui-datepicker('Время окончания аренды', 'order-form, --time')(placeholder='--:--')
           .order-form__line
             +ui-input('name', 'ФИО', 'order-form')
             +ui-input('bday', 'Дата рождения', 'order-form')

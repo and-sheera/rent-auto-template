@@ -11,16 +11,20 @@ import goodsBlock from '../blocks/goods/goods'
 import headerScripts from '../blocks/header/header'
 import dropPhones from '../blocks/drop-phones/drop-phones'
 import popupForm from '../blocks/popup-form/popup-form'
+import uiInput from '../blocks/_ui/ui-input/ui-input'
+import offers from '../blocks/offers/offers'
 
 document.addEventListener('DOMContentLoaded', function () {
   uiDatepicker()
   uiRange()
   uiSelects()
   uiTextarea()
+  uiInput()
   uiTooltip()
   sliderInit()
   goodsBlock()
   headerScripts()
   dropPhones()
   popupForm()
+  offers()
 })

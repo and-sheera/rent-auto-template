@@ -23,6 +23,7 @@
     .tippy {
       &-content {
         padding: 7px;
+        text-align: start;
       }
       &-arrow {
         width: 20px;
@@ -43,6 +44,17 @@
         &-arrow {
           &::before {
             bottom: -9px;
+          }
+        }
+      }
+    }
+    &[data-placement^='bottom'] {
+      .tippy {
+        &-arrow {
+          &::before {
+            top: -21px;
+            left: -7px;
+            transform: rotate(180deg);
           }
         }
       }

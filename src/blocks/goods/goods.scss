@@ -4,49 +4,6 @@
   @include media-tablet {
     margin-top: 50px;
   }
-  &--card-auto {
-    margin: 100px 0 70px;
-    @include media-tablet {
-      margin: 50px 0 100px;
-    }
-    .goods {
-      &__ui-h2 {
-        @include media-tablet {
-          display: none;
-        }
-      }
-      &-item {
-        box-shadow: none;
-        &:not(:last-child) {
-          @include media-tablet {
-            margin-right: 15px;
-          }
-        }
-        @include media-tablet {
-          width: 290px;
-          overflow: visible;
-          flex-shrink: 0;
-        }
-        &__info {
-          margin-top: 15px;
-          padding: 0;
-        }
-        &__img {
-          border-radius: 6px;
-          overflow: hidden;
-        }
-      }
-      &__grid {
-        @include media-tablet {
-          display: flex;
-          margin: 0 -15px;
-          padding: 0 15px;
-          overflow-x: auto;
-          gap: 0;
-        }
-      }
-    }
-  }
   &__ui-h2 {
     margin-bottom: 50px;
     text-align: center;
@@ -92,11 +49,14 @@
   }
   &-item {
     position: relative;
+    display: flex;
+    flex-direction: column;
     background-color: #fff;
     box-shadow: 0 8px 24px rgb(0 0 0 / 0.15);
     border-radius: 6px;
     overflow: hidden;
     @include media-tablet {
+      width: 100%;
       max-width: 350px;
     }
     &--mb-unvisible {
@@ -122,6 +82,7 @@
       display: flex;
       flex-direction: column;
       padding: 15px 15px 25px;
+      flex-grow: 1;
       @include media-tablet {
         padding: 20px 10px 25px;
       }

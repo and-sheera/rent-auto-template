@@ -1,4 +1,4 @@
-mixin goods(type, mods)
+mixin goods(mods)
   -
     const baseName = 'goods'
     let allMods = ''
@@ -38,27 +38,17 @@ mixin goods(type, mods)
 
   .goods(class=allMods)&attributes(attributes)
     .inner
-      case type
-        when 'main'
-          +ui-h2('Самые популярные автомобили', 'goods')
-          .goods__grid
-            +goods-item(itemData)
-            +goods-item(itemData2)
-            +goods-item(itemData)
-            +goods-item(itemData2)
-            +goods-item(itemData, '--mb-unvisible')
-            +goods-item(itemData2, '--mb-unvisible')
-            +goods-item(itemData, '--mb-unvisible')
-            +goods-item(itemData2, '--mb-unvisible')
-          button.goods__more-btn Показать ещё
-
-        when 'card-auto'
-          +ui-h2('Похожие автомобили', 'goods, --fw-500')
-          .goods__grid.goods__grid--mb-swipe
-            +goods-item(itemData)
-            +goods-item(itemData2)
-            +goods-item(itemData)
-            +goods-item(itemData2)
+      +ui-h2('Самые популярные автомобили', 'goods')
+      .goods__grid
+        +goods-item(itemData)
+        +goods-item(itemData2)
+        +goods-item(itemData)
+        +goods-item(itemData2)
+        +goods-item(itemData, '--mb-unvisible')
+        +goods-item(itemData2, '--mb-unvisible')
+        +goods-item(itemData, '--mb-unvisible')
+        +goods-item(itemData2, '--mb-unvisible')
+      button.goods__more-btn Показать ещё
     block
 
 mixin goods-item(goodsData, mods)

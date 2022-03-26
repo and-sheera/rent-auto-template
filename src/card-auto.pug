@@ -3,6 +3,32 @@ extends layouts/layout
 block variables
   -const pageTitle ='Эконом LIFAN SMILY 1.3 MT'
 
+  -
+    const itemData={
+      img: 'goods_1.jpg',
+      logo: 'goods-logo_1.png',
+      name: 'HYUNDAI CRETA',
+      type: 'Кроссоверы',
+      desc: '2017 г. в., 6АТ',
+      price: {
+        old: 'от 1 050 ₽',
+        new: 'от 1 650 ₽'
+      }
+    }
+
+  -
+    const itemData2={
+      img: 'goods_2.jpg',
+      logo: 'goods-logo_2.png',
+      name: 'CHEVROLET AVEOCHEVROLET AVEO',
+      type: 'Стандарт',
+      desc: '2015 г. в., 6АТ',
+      price: {
+        old: 'от 1 050 ₽',
+        new: 'от 1 650 ₽'
+      }
+    }
+
 block content
   main
     +breadcrumbs
@@ -11,4 +37,8 @@ block content
       +breadcrumbs-item(pageTitle)
     +auto-card
     +text-info
-    +goods('card-auto', '--card-auto')
+    +offers('Похожие автомобили', '--card-auto')
+      +goods-item(itemData, 'offers')
+      +goods-item(itemData2, 'offers')
+      +goods-item(itemData, 'offers')
+      +goods-item(itemData2, 'offers')

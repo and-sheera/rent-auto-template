@@ -15,7 +15,7 @@ export default function uiDatepicker() {
     noCalendar: true,
     dateFormat: 'H:i',
     time_24hr: true,
-    disableMobile: 'true',
+    // disableMobile: 'true',
     allowInput: true
   }
 
